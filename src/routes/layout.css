@@ -1,0 +1,204 @@
+@import 'tailwindcss';
+@import 'flatpickr/dist/flatpickr.min.css';
+
+@font-face {
+	font-family: 'BobbyJones';
+	src: url('/assets/fonts/BobbyJonesSoft.otf') format('truetype');
+	font-weight: 700;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Fustat';
+	src: url('/assets/fonts/Fustat-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Fustat';
+	src: url('/assets/fonts/Fustat-SemiBold.ttf') format('truetype');
+	font-weight: 600;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Fustat';
+	src: url('/assets/fonts/Fustat-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Fustat';
+	src: url('/assets/fonts/Fustat-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-display: swap;
+}
+
+* {
+	@apply box-border;
+}
+
+html {
+	font-size: 16px;
+}
+
+body {
+	font-family: 'Fustat', sans-serif;
+	line-height: 1.3;
+	background-color: #ffefef;
+	color: #000000;
+}
+
+html,
+body {
+	overflow-x: hidden;
+	@apply bg-background;
+}
+
+@theme {
+	/* ─── Colors ─── */
+	--color-background: #ffefef;
+	--color-primary: #df1013;
+	--color-secondary: #3fc263;
+	--color-tertiary: #f1d66d;
+	--color-white: #ffffff;
+	--color-dark: #151d3c;
+	--color-dark-accent: #5a5a5a;
+	--color-primary-dark: #eb8282;
+
+	/* ─── Font families ─── */
+	--font-fustat: 'Fustat', sans-serif;
+	--font-bobbyjones: 'BobbyJones', sans-serif;
+
+	/* ─── Desktop type scale ─── */
+
+	/* Display — 61px / BobbyJones */
+	--text-title-3xl: 3.815rem;
+	--text-title-3xl--line-height: 1.25;
+	--text-title-3xl--font-weight: 700;
+	--text-title-3xl--letter-spacing: -0.022em;
+
+	/* H1 — 61px */
+	--text-title-6xl: 3.815rem;
+	--text-title-6xl--line-height: 1.25;
+	--text-title-6xl--font-weight: 600;
+	--text-title-6xl--letter-spacing: -0.022em;
+
+	/* H2 — 48px */
+	--text-title-2xl: 3.05rem;
+	--text-title-2xl--font-weight: 500;
+	--text-title-2xl--letter-spacing: -0.022em;
+
+	/* H3 — 39px */
+	--text-title-xl: 2.44rem;
+	--text-title-xl--font-weight: 500;
+	--text-title-xl--letter-spacing: -0.022em;
+
+	/* H4 — 31px */
+	--text-title-lg: 1.95rem;
+	--text-title-lg--font-weight: 500;
+	--text-title-lg--letter-spacing: -0.022em;
+
+	/* H5 — 25px */
+	--text-title-md: 1.5625rem;
+	--text-title-md--font-weight: 500;
+	--text-title-md--letter-spacing: -0.022em;
+
+	/* H6 — 20px */
+	--text-title-sm: 1.25rem;
+	--text-title-sm--line-height: 1.1;
+	--text-title-sm--font-weight: 500;
+	--text-title-sm--letter-spacing: -0.022em;
+
+	/* Description — 20px */
+	--text-subtitle: 1.25rem;
+	--text-subtitle--line-height: 1.2;
+	--text-subtitle--font-weight: 500;
+	--text-subtitle--letter-spacing: -0.022em;
+
+	/* Body — 16px */
+	--text-body: 1rem;
+	--text-body--line-height: 1.3;
+	--text-body--font-weight: 400;
+	--text-body--letter-spacing: -0.022em;
+
+	/* Button — 16px */
+	--text-button: 1rem;
+	--text-button--line-height: 1;
+	--text-button--font-weight: 500;
+	--text-button--letter-spacing: -0.022em;
+
+	/* Tab — 18px */
+	--text-tab: 1.125rem;
+	--text-tab--font-weight: 400;
+
+	/* Tag — 16px */
+	--text-tag: 1rem;
+	--text-tag--font-weight: 400;
+	--text-tag--letter-spacing: -0.022em;
+
+	/* P-small — 14px */
+	--text-p-small: 0.875rem;
+	--text-p-small--font-weight: 400;
+
+	/* ─── Mobile type scale ─── */
+
+	/* Mobile H1 — 47px */
+	--text-mobile-title-3xl: 2.9375rem;
+	--text-mobile-title-3xl--line-height: 1.2;
+	--text-mobile-title-3xl--font-weight: 600;
+	--text-mobile-title-3xl--letter-spacing: -0.022em;
+
+	/* Mobile H2 — 39px */
+	--text-mobile-title-2xl: 2.488rem;
+	--text-mobile-title-2xl--line-height: 1.2;
+	--text-mobile-title-2xl--font-weight: 500;
+	--text-mobile-title-2xl--letter-spacing: -0.022em;
+
+	/* Mobile H3 — 33px */
+	--text-mobile-title-xl: 2.075rem;
+	--text-mobile-title-xl--line-height: 1.2;
+	--text-mobile-title-xl--font-weight: 500;
+
+	/* Mobile H4 — 27px */
+	--text-mobile-title-lg: 1.125rem;
+	--text-mobile-title-lg--line-height: 1.3;
+	--text-mobile-title-lg--font-weight: 500;
+
+	/* Mobile H5 — 23px */
+	--text-mobile-title-md: 1.4375rem;
+	--text-mobile-title-md--font-weight: 500;
+	--text-mobile-title-md--letter-spacing: -0.022em;
+
+	/* Mobile H6 — 19px */
+	--text-mobile-title-sm: 1.1875rem;
+	--text-mobile-title-sm--line-height: 1.1;
+	--text-mobile-title-sm--font-weight: 500;
+	--text-mobile-title-sm--letter-spacing: -0.022em;
+
+	/* Mobile description — 14px */
+	--text-description: 1rem;
+	--text-description--line-height: 1.2;
+	--text-description--font-weight: 400;
+
+	/* Mobile tag — 14px */
+	--text-mobile-tag: 0.875rem;
+	--text-mobile-tag--line-height: 1;
+	--text-mobile-tag--font-weight: 400;
+
+	/* Mobile texte large — 28px */
+	--text-mobile-large: 1.75rem;
+	--text-mobile-large--line-height: 1;
+	--text-mobile-large--font-weight: 600;
+
+	/* ─── Breakpoints ─── */
+	--breakpoint-2xs: 375px;
+	--breakpoint-xs: 480px;
+	--breakpoint-xl: 1280px;
+	--breakpoint-3xl: 1920px;
+}
+
+.grid-section {
+	@apply xl:grid xl:grid-cols-8 xl:gap-x-5 xl:px-20;
+}
+.sm-grid-section {
+	@apply sm:grid sm:grid-cols-8 sm:gap-x-5;
+}
