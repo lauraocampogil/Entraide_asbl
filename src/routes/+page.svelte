@@ -1,2 +1,23 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script lang="ts">
+	const blocks = [
+		{
+			type: 'HeaderBlock',
+			props: {
+				logo: '/assets/svg/Logo-Entraide.svg',
+				menu: `<svg width="27" height="11" viewBox="0 0 27 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="0.5" y1="0.5" x2="26.5" y2="0.5" stroke="black" stroke-linecap="round"/>
+<line x1="0.5" y1="5.3" x2="26.5" y2="5.3" stroke="black" stroke-linecap="round"/>
+<line x1="0.5" y1="10.1" x2="13.9" y2="10.1" stroke="black" stroke-linecap="round"/>
+</svg>`,
+				closeButton: '',
+				navigation: {
+					links: [
+						{ label: 'Qui sommes-nous?', href: '#qui-sommes-nous' },
+						{ label: 'Nos activités', href: '#activités' },
+						{ label: 'Info pratique', href: '#info-pratique' }
+					]
+				}
+			}
+		}
+	];
+</script>
