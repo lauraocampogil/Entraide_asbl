@@ -110,7 +110,7 @@
 						id: 1,
 						title: 'Apprendre le français',
 						description:
-							'Nos cours sont faits pour vous accueillir là où vous en êtes, sans jugement et à votre propre rythme..'
+							'Nos cours sont faits pour vous accueillir là où vous en êtes, sans jugement et à votre propre rythme.'
 					},
 					{
 						id: 2,
@@ -155,6 +155,44 @@
 			props: {
 				title: 'Comment tout a commencé',
 				text: '<strong>Entraide Bruxelles</strong>, active depuis 1982 à Laeken, est une association qui œuvre pour l’inclusion sociale et l’intégration des personnes les plus vulnérables, notamment les réfugiés, demandeurs d’asile et personnes issues de l’immigration. Elle propose un cadre d’accueil convivial favorisant l’apprentissage du français, l’autonomie et le vivre-ensemble dans un contexte interculturel En 2022, l’association a également accueilli des femmes et des jeunes ukrainiens touchés par la guerre en Ukraine. À travers ses activités et formations, elle encourage la mixité sociale, culturelle et de genre, tout en promouvant des valeurs d’inclusion, de respect et de tolérance. Ses actions se concentrent principalement sur trois axes : <strong>l’intégration sociale et citoyenne, l’insertion socioprofessionnelle et l’accompagnement des enfants et des familles dans leur parcours scolaire</strong>.'
+			}
+		},
+		{
+			type: 'ValeursBlock',
+			props: {
+				title: 'Ce qui nous guide',
+				valeurs: [
+					{
+						id: 1,
+						svg: '/assets/svg/valeurs1.svg',
+						item: 'Inclusion'
+					},
+					{
+						id: 2,
+						svg: '/assets/svg/valeurs2.svg',
+						item: 'Respect'
+					},
+					{
+						id: 3,
+						svg: '/assets/svg/valeurs3.svg',
+						item: 'Tolérance'
+					},
+					{
+						id: 4,
+						svg: '/assets/svg/valeurs4.svg',
+						item: 'Interculture'
+					},
+					{
+						id: 5,
+						svg: '/assets/svg/valeurs5.svg',
+						item: 'Mixité'
+					},
+					{
+						id: 6,
+						svg: '/assets/svg/valeurs6.svg',
+						item: 'Egalité'
+					}
+				]
 			}
 		}
 	];
