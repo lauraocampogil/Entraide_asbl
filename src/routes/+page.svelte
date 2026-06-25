@@ -98,6 +98,40 @@
 					}
 				]
 			}
+		},
+		{
+			type: 'ProgrammesBlock',
+			props: {
+				title: "Qu'est-ce qu'on peut faire pour vous ?",
+				ctaLabel: 'En savoir plus',
+				ctaHref: '/nos-activites',
+				cards: [
+					{
+						id: 1,
+						title: 'Apprendre le français',
+						description:
+							'Nos cours sont faits pour vous accueillir là où vous en êtes, sans jugement et à votre propre rythme..'
+					},
+					{
+						id: 2,
+						title: 'Aide pour les devoirs',
+						description:
+							"Un endroit calme et bienveillant pour aider votre enfant à avancer et reprendre confiance à l'école"
+					},
+					{
+						id: 3,
+						title: 'Utiliser internet',
+						description:
+							'Mails, démarches en ligne, smartphone... On vous montre comment faire, doucement et sans vous perdre'
+					},
+					{
+						id: 4,
+						title: 'Aide pour les papiers',
+						description:
+							'Un formulaire, une lettre, une inscription? On prend le temps de vous écouter et de vous aider'
+					}
+				]
+			}
 		}
 	];
 </script>
