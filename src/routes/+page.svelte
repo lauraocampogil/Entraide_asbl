@@ -194,6 +194,26 @@
 					}
 				]
 			}
+		},
+		{
+			type: 'PourquiBlock',
+			props: {
+				title: 'Pour qui?',
+				cards: [
+					{
+						id: 1,
+						title: 'Pour les adultes',
+						description:
+							"Nous soutenons particulièrement les personnes issues de l'immigration et les chercheurs d'emploi à travers des formations linguistiques, civiques et un accompagnement vers l'autonomie."
+					},
+					{
+						id: 2,
+						title: 'Pour les enfants',
+						description:
+							"Pour les 6-12 ans du quartier de Laeken, nous proposons une école de devoirs et des activités créatives pour favoriser la réussite scolaire et l'épanouissement personnel."
+					}
+				]
+			}
 		}
 	];
 </script>
