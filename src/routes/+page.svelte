@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { format } from 'path';
+
 	const blocks = [
 		{
 			type: 'HeaderBlock',
@@ -211,6 +213,46 @@
 						title: 'Pour les enfants',
 						description:
 							"Pour les 6-12 ans du quartier de Laeken, nous proposons une école de devoirs et des activités créatives pour favoriser la réussite scolaire et l'épanouissement personnel."
+					}
+				]
+			}
+		},
+		{
+			type: 'EquipeBlock',
+			props: {
+				title: 'Notre belle famille',
+				personnel: [
+					{
+						id: 1,
+						title: 'Anastasia Papadopoulos',
+						description: 'Directrice'
+					},
+					{
+						id: 2,
+						title: 'Fadi Zoghlami',
+						description: 'Coordinatrice'
+					}
+				],
+				formateurs: [
+					{
+						title: 'Formateurs',
+						text1: 'Équipe pédagogique FLE',
+						text2: 'Animateurs école de devoirs',
+						text3: 'Formateurs en citoyenneté'
+					}
+				],
+				benevoles: [
+					{
+						title: 'Bénévoles',
+						description:
+							"Un réseau dynamique de citoyens engagés qui nous épaulent au quotidien pour le soutien scolaire et l'accueil."
+					}
+				],
+				stagiaires: [
+					{
+						title: 'Stagiaires',
+						description:
+							'Nous accueillons chaque année des étudiants en assistant social et éducateur spécialisé pour leur première expérience.'
 					}
 				]
 			}
