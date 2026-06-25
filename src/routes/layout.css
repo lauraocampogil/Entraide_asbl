@@ -63,6 +63,8 @@ body {
 	--color-dark: #151d3c;
 	--color-dark-accent: #5a5a5a;
 	--color-primary-dark: #eb8282;
+	--color-tag: #ca0003;
+	--color-polygon: #df7a7c;
 
 	/* ─── Font families ─── */
 	--font-fustat: 'Fustat', sans-serif;
