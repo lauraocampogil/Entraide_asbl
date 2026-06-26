@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Hero from '$lib/components/sections/home/Hero.svelte';
-	import Partenaires from '$lib/components/sections/home/Partenaires.svelte';
+	import Partenaires from '$lib/components/ui/Partenaires.svelte';
 	import Programmes from '$lib/components/sections/home/Programmes.svelte';
 	import CTA from '$lib/components/sections/home/CTA.svelte';
 	import APropos from '$lib/components/sections/about/APropos.svelte';
