@@ -10,7 +10,7 @@
 	} = $props();
 
 	// Duplique les logos pour le scroll infini
-	const doubled = [...images, ...images];
+	const doubled = $derived([...images, ...images]);
 </script>
 
 <section class="bg-primary-dark py-10 xl:py-14 overflow-hidden">
