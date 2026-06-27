@@ -2,7 +2,7 @@
 	import Hero from '$lib/components/sections/home/Hero.svelte';
 	import Partenaires from '$lib/components/ui/Partenaires.svelte';
 	import Programmes from '$lib/components/sections/home/Programmes.svelte';
-	import CTA from '$lib/components/sections/home/CTA.svelte';
+	import CTA from '$lib/components/ui/CTA.svelte';
 	import APropos from '$lib/components/sections/about/APropos.svelte';
 	import Histoire from '$lib/components/sections/about/Histoire.svelte';
 	import Valeurs from '$lib/components/sections/about/Valeurs.svelte';
