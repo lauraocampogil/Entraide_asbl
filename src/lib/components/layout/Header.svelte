@@ -23,7 +23,7 @@
 	<div class="flex items-center justify-between px-5 py-3 xl:px-20 xl:py-0 xl:h-[72px]">
 		<!-- Logo -->
 		<a href="/" class="shrink-0">
-			<img src={logo} alt="Entraide Bruxelles" class="h-10 w-auto" />
+			<img src={logo} alt="Entraide Bruxelles" class="h-12 w-auto" />
 		</a>
 
 		<!-- Nav desktop -->
