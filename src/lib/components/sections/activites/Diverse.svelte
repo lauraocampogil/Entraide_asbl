@@ -14,8 +14,10 @@
 		}[];
 	} = $props();
 
-	let activeId = $state(activities[0]?.id ?? 1);
-
+	let activeId = $state<number>(0);
+	$effect(() => {
+		activeId = activities[0]?.id ?? 1;
+	});
 	const active = $derived(activities.find((a) => a.id === activeId));
 </script>
 
