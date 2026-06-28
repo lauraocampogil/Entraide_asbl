@@ -8,9 +8,9 @@
 				ctaLabel: 'Découvrir nos activités',
 				ctaHref: '/nos-activites',
 				stats: [
-					{ value: '+550', label: 'Adultes formés en 2024' },
-					{ value: '70', label: 'Enfants accompagnés' },
-					{ value: '20+', label: 'Nationalités différentes' }
+					{ value: '+550', label: 'Adultes formés\nen 2024' },
+					{ value: '70', label: 'Enfants\naccompagnés' },
+					{ value: '20+', label: 'Nationalités\ndifférentes' }
 				],
 				images: [
 					{ src: '/assets/images/asbl6.jpeg', alt: 'Cours de français à Entraide Bruxelles' },
