@@ -75,10 +75,10 @@
 		{
 			type: 'CTABlock',
 			props: {
-				title: 'Vous voulez nous rejoindre ?',
+				title: 'Vous voulez nous rejoindre?',
 				description:
 					'Que ce soit pour suivre une formation, donner un coup de main en tant que bénévole ou faire un stage — vous êtes les bienvenus. On sera heureux de vous accueillir.',
-				ctaLabel: 'Nous contacter',
+				ctaLabel: 'Nous contactez',
 				ctaHref: '/info-pratique'
 			}
 		}
