@@ -19,7 +19,6 @@
 		instagram: { href: 'https://instagram.com' },
 		facebook: { href: 'https://facebook.com' },
 		contact: {
-			phone: '+32 486 89 90 58',
 			email: 'anasta5853@gmail.com',
 			adresse: 'Rue Moorslede 54,\n1020 Bruxelles – Laeken'
 		},

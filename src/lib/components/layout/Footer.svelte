@@ -12,7 +12,7 @@
 		tagline: string;
 		instagram: { href: string };
 		facebook: { href: string };
-		contact: { phone: string; email: string; adresse: string };
+		contact: { email: string; adresse: string };
 		liens: { links: { label: string; href: string }[] };
 		legal: { label: string; href: string }[];
 	} = $props();
@@ -63,21 +63,6 @@
 	<div class="xl:col-span-2 xl:col-start-5 flex flex-col gap-4 mb-10 xl:mb-0">
 		<p class="font-fustat font-semibold text-body text-primary">Contactez-nous</p>
 		<div class="flex flex-col gap-3">
-			<a
-				href="tel:{contact.phone}"
-				class="flex items-center gap-3 font-fustat text-body text-dark hover:text-primary transition-colors"
-			>
-				<svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="shrink-0"
-					><path
-						d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.01l-2.2 2.21z"
-						stroke="currentColor"
-						stroke-width="1.5"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-					/></svg
-				>
-				{contact.phone}
-			</a>
 			<a
 				href="mailto:{contact.email}"
 				class="flex items-center gap-3 font-fustat text-body text-dark hover:text-primary transition-colors"
@@ -147,7 +132,7 @@
 		class="xl:col-span-8 mt-16 xl:mt-32 flex flex-col gap-1 xl:flex-row xl:justify-end xl:gap-12"
 	>
 		<p class="font-fustat text-p-small text-dark-accent">
-			Entraide Bruxelles 2026 © Tous droit réservés
+			Entraide Bruxelles {new Date().getFullYear()} © Tous droit réservés
 		</p>
 		<p class="font-fustat text-p-small text-dark-accent">
 			Made with love by <a
