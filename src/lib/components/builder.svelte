@@ -10,6 +10,7 @@
 	import Equipe from '$lib/components/sections/about/Equipe.svelte';
 	import ActivitesHero from '$lib/components/sections/activites/ActivitesHero.svelte';
 	import Diverse from '$lib/components/sections/activites/Diverse.svelte';
+	import Contact from '$lib/components/sections/contact/Contact.svelte';
 
 	let { blocks = [] }: { blocks: { type: string; props: Record<string, any> }[] } = $props();
 
@@ -23,8 +24,9 @@
 		ValeursBlock: Valeurs,
 		PourquiBlock: PourQui,
 		EquipeBlock: Equipe,
-		ActivitéBlock: ActivitesHero,
-		DiverseBlock: Diverse
+		ActivitesHeroBlock: ActivitesHero,
+		DiverseBlock: Diverse,
+		ContactBlock: Contact
 	};
 </script>
 
