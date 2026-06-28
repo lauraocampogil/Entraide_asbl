@@ -18,7 +18,7 @@
 
 	<!-- Label -->
 	<span
-		class="font-fustat uppercase tracking-wide text-tag
+		class="uppercase text-tag
 		text-mobile-tag xl:text-tag"
 	>
 		{label}
