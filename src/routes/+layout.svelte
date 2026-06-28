@@ -21,7 +21,7 @@
 		contact: {
 			phone: '+32 486 89 90 58',
 			email: 'anasta5853@gmail.com',
-			adresse: 'Rue Moorslede 54, 1020 Bruxelles – Laeken'
+			adresse: 'Rue Moorslede 54,\n1020 Bruxelles – Laeken'
 		},
 		liens: {
 			links: [
@@ -33,7 +33,8 @@
 		},
 		legal: [
 			{ label: 'Mentions Légales', href: '/mentions-legales' },
-			{ label: 'Politique de confidentialité', href: '/politique-de-confidentialite' }
+			{ label: 'Politique de confidentialité', href: '/politique-de-confidentialite' },
+			{ label: 'Cookies', href: '/cookies' }
 		]
 	};
 </script>
