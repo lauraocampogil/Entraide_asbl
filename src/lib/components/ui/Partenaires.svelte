@@ -17,9 +17,7 @@
 	<!-- Tagline + description -->
 	<div class="px-5 xl:px-20 flex flex-col items-center gap-4 mb-10 xl:mb-12 text-center">
 		<Tagline label="Nos partenaires" />
-		<p
-			class="font-fustat text-mobile-title-xl xl:text-title-lg font-medium text-white leading-snug max-w-3xl"
-		>
+		<p class="text-mobile-title-md xl:text-title-md text-white">
 			{description}
 		</p>
 	</div>
