@@ -15,61 +15,50 @@
 	} = $props();
 
 	const icons: Record<number, string> = {
-		1: `<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path d="M8 12h14M8 18h8M22 8v16M30 8l6 16M30 8l-6 16M28 14h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-			<path d="M20 32l8 8M28 32l-8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-		</svg>`,
-		2: `<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<rect x="10" y="8" width="28" height="34" rx="3" stroke="currentColor" stroke-width="1.5"/>
-			<line x1="16" y1="20" x2="32" y2="20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-			<line x1="16" y1="26" x2="26" y2="26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-		</svg>`,
-		3: `<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<circle cx="24" cy="22" r="14" stroke="currentColor" stroke-width="1.5"/>
-			<path d="M24 8c-4 4-6 9-6 14s2 10 6 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-			<path d="M24 8c4 4 6 9 6 14s-2 10-6 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-			<line x1="10" y1="22" x2="38" y2="22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-			<path d="M32 32l4 4M36 32l2 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-		</svg>`,
-		4: `<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path d="M10 36V14a2 2 0 0 1 2-2h10c2 4 6 6 10 0h4a2 2 0 0 1 2 2v22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-			<path d="M10 36c4-4 24-4 28 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-		</svg>`
+		1: `<svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M30.625 61.25L45.9375 28.4375L61.25 61.25M35 52.5H56.875M35.9742 15.645C32.7629 15.4233 29.5167 15.3125 26.25 15.3125C20.3999 15.3108 14.5553 15.6722 8.75 16.3946M26.25 15.3125V8.75M35.9742 15.645C32.5967 31.0858 22.4292 43.9833 8.75 51.0475M35.9742 15.645C38.5726 15.8219 41.1656 16.0719 43.75 16.3946M30.3654 41.1717C25.582 36.3085 21.7908 30.5608 19.2033 24.2492" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`,
+		2: `<svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.6667 55.4167V14.5833C11.6667 13.0362 12.2813 11.5525 13.3752 10.4585C14.4692 9.36458 15.9529 8.75 17.5 8.75H56.5834C57.0475 8.75 57.4926 8.93437 57.8208 9.26256C58.149 9.59075 58.3334 10.0359 58.3334 10.5V48.7492M17.5 49.5833H58.3334M17.5 61.25H58.3334" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M17.5 61.25C15.9529 61.25 14.4692 60.6355 13.3752 59.5415C12.2813 58.4475 11.6667 56.9638 11.6667 55.4167C11.6667 53.8696 12.2813 52.3859 13.3752 51.2919C14.4692 50.198 15.9529 49.5834 17.5 49.5834" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M26.25 20.4166H43.75" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+</svg>`,
+		3: `<svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M64.1666 35C64.1666 18.8913 51.1087 5.83337 35 5.83337C18.8912 5.83337 5.83331 18.8913 5.83331 35C5.83331 51.1088 18.8912 64.1667 35 64.1667" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M37.9167 5.97925C37.9167 5.97925 46.6667 17.5001 46.6667 35.0001M32.0833 64.0209C32.0833 64.0209 23.3333 52.5001 23.3333 35.0001C23.3333 17.5001 32.0833 5.97925 32.0833 5.97925M7.67084 45.2084H35M7.67084 24.7917H62.3292" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M63.8137 52.258C65.2545 53.1447 65.1641 55.3001 63.6825 55.4692L56.1954 56.318L52.8383 63.0613C52.1733 64.4001 50.117 63.7438 49.7758 62.0872L46.1154 44.2488C45.8266 42.8488 47.0866 41.968 48.3029 42.7176L63.8137 52.258Z" stroke="black" stroke-width="1.5"/>
+</svg>`,
+		4: `<svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M35 55C30.5567 52.7767 26.11 51.6667 21.6667 51.6667C17.2234 51.6667 12.7767 52.7767 8.33337 55V21.9667C12.7767 19.5467 17.2234 18.3334 21.6667 18.3334C26.11 18.3334 30.5567 19.5467 35 21.9667C39.4434 19.5467 43.89 18.3334 48.3334 18.3334C52.7767 18.3334 57.2234 19.5467 61.6667 21.9667V55C57.2234 52.7767 52.7767 51.6667 48.3334 51.6667C43.89 51.6667 39.4434 52.7767 35 55ZM35 21.9667V55" stroke="black" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`
 	};
 </script>
 
-<section class="bg-background px-5 py-12 xl:px-20 xl:py-20">
-	<!-- Header : tagline + titre -->
-	<div class="flex flex-col items-center gap-3 mb-6 xl:mb-4 text-center">
+<section class="grid-section bg-background px-5 py-12 xl:py-20 3xl:container 3xl:mx-auto">
+	<!-- Tagline + titre : col 1-8 centré -->
+	<div class="xl:col-span-8 flex flex-col items-center gap-3 mb-10 xl:mb-6 text-center">
 		<Tagline label="Nos programmes" />
-		<h2
-			class="font-fustat font-medium text-mobile-title-xl xl:text-title-2xl text-dark leading-snug max-w-2xl"
-		>
+		<h2 class="text-mobile-title-xl xl:text-title-xl text-dark max-w-2xl">
 			{title}
 		</h2>
 	</div>
 
-	<!-- Bouton aligné à droite -->
-	<div class="flex justify-end mb-8 xl:mb-10">
+	<!-- Bouton aligné à droite : col 1-8 -->
+	<div class="xl:col-span-8 flex justify-end mb-4 xl:mb-8 xl:mt-10">
 		<Button href={ctaHref} label={ctaLabel} variant="inline" />
 	</div>
 
-	<!-- Cards -->
-	<div class="flex flex-col gap-4 xl:grid xl:grid-cols-4 xl:gap-5">
+	<!-- Cards : col 1-8, 4 colonnes desktop -->
+	<div class="xl:col-span-8 flex flex-col gap-4 xl:grid xl:grid-cols-4 xl:gap-5">
 		{#each cards as card}
-			<div
-				class="bg-white rounded-2xl px-6 py-8 flex flex-col items-center gap-4 text-center shadow-sm"
-			>
-				<!-- Icône -->
+			<div class="bg-white rounded-[30px] px-8 py-8 flex flex-col items-center gap-4 text-center">
 				<div class="text-dark">
 					{@html icons[card.id] ?? icons[1]}
 				</div>
-				<!-- Titre -->
 				<p class="font-fustat font-bold text-title-sm text-dark">
 					{card.title}
 				</p>
-				<!-- Description -->
-				<p class="font-fustat text-description text-dark-accent leading-relaxed">
+				<p class="text-body text-dark">
 					{card.description}
 				</p>
 			</div>
