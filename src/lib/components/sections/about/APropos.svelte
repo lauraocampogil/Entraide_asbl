@@ -13,7 +13,7 @@
 				viewBox="0 0 120 114"
 				fill="none"
 				xmlns="http://www.w3.org/2000/svg"
-				class="xl:w-[140px] xl:h-auto"
+				class="xl:w-35 xl:h-auto"
 			>
 				<path d="M60 4L114 42.3L93.3 110H26.7L6 42.3L60 4Z" fill="var(--color-primary-dark)" />
 			</svg>
