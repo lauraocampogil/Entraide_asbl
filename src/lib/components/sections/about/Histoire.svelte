@@ -14,27 +14,27 @@
 	<!-- ══ MOBILE : empilé ══ -->
 	<div class="xl:hidden flex flex-col gap-6">
 		<Tagline label="Notre histoire" />
-		<h2 class="font-fustat font-medium text-mobile-title-2xl text-dark leading-snug">
+		<h2 class="font-fustat font-medium text-mobile-title-xl text-dark leading-snug">
 			{title}
 		</h2>
-		<div class="font-fustat text-description text-dark leading-relaxed flex flex-col gap-4">
+		<div class="text-body text-dark leading-relaxed [&>p+p]:mt-4">
 			{@html text}
 		</div>
 	</div>
 
-	<!-- ══ DESKTOP : 2 colonnes ══ -->
-	<div class="hidden xl:grid xl:grid-cols-8 xl:gap-x-5">
-		<!-- Col gauche : tagline + titre -->
-		<div class="col-span-3 flex flex-col gap-5 pr-8">
+	<!-- ══ DESKTOP : grid 8 cols × 2 rows ══ -->
+	<div class="hidden xl:grid xl:grid-cols-8 xl:grid-rows-[auto_1fr] xl:gap-x-5 xl:gap-y-10">
+		<!-- Row 1 : tagline + titre ensemble, col 1-3 -->
+		<div class="col-span-3 row-start-1 flex flex-col gap-2">
 			<Tagline label="Notre histoire" />
-			<h2 class="font-fustat font-medium text-title-2xl text-dark leading-snug">
+			<h2 class="text-title-xl text-dark leading-snug">
 				{title}
 			</h2>
 		</div>
 
-		<!-- Col droite : texte -->
+		<!-- Row 2 : texte col 4-8, sous le titre -->
 		<div
-			class="col-span-5 col-start-4 font-fustat text-body text-dark leading-relaxed flex flex-col gap-5 pt-1"
+			class="col-span-5 col-start-4 row-start-2 text-body text-dark leading-relaxed [&>p+p]:mt-5"
 		>
 			{@html text}
 		</div>
