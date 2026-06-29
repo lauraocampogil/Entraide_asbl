@@ -64,6 +64,7 @@ body {
 	--color-primary-dark: #eb8282;
 	--color-tag: #ca0003;
 	--color-polygon: #df7a7c;
+	--color-pink: #ffb6b7;
 
 	/* ─── Font families ─── */
 	--font-fustat: 'Fustat', sans-serif;
@@ -118,7 +119,7 @@ body {
 	/* Text large — 40px */
 	--text-large: 2.5rem;
 	--text-large--line-height: 1;
-	--text-large--font-weight: 600;
+	--text-large--font-weight: 500;
 
 	/* Body — 16px */
 	--text-body: 1rem;
