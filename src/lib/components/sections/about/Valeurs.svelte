@@ -12,11 +12,9 @@
 
 <section class="bg-primary-dark px-5 py-12 xl:px-20 xl:py-16">
 	<!-- Tagline + titre -->
-	<div class="flex flex-col items-center gap-4 mb-10 xl:mb-14 text-center">
+	<div class="flex flex-col items-center gap-2 mb-10 xl:mb-14 text-center">
 		<Tagline label="Nos valeurs" />
-		<h2
-			class="font-fustat font-medium text-mobile-title-xl xl:text-title-2xl text-white leading-snug"
-		>
+		<h2 class="text-mobile-title-xl xl:text-title-xl text-white leading-snug">
 			{title}
 		</h2>
 	</div>
@@ -27,7 +25,7 @@
 			<div class="flex flex-col items-center gap-3">
 				<!-- Icône dans card blanche -->
 				<div
-					class="w-20 h-20 xl:w-24 xl:h-24 bg-white rounded-2xl xl:rounded-3xl flex items-center justify-center shadow-sm"
+					class="w-20 h-20 xl:w-21 xl:h-21 bg-white rounded-2xl xl:rounded-[30px] flex items-center justify-center"
 				>
 					<img
 						src={valeur.svg}
@@ -36,7 +34,7 @@
 					/>
 				</div>
 				<!-- Label -->
-				<span class="font-fustat text-description xl:text-body text-white text-center">
+				<span class="text-body xl:text-tab text-white text-center">
 					{valeur.item}
 				</span>
 			</div>
