@@ -8,7 +8,7 @@
 				ctaLabel: 'Découvrir nos activités',
 				ctaHref: '/nos-activites',
 				stats: [
-					{ value: '+550', label: 'Adultes formés\nen 2024' },
+					{ value: '+550', label: 'Adultes\nformés' },
 					{ value: '70', label: 'Enfants\naccompagnés' },
 					{ value: '20+', label: 'Nationalités\ndifférentes' }
 				],
