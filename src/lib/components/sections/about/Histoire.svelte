@@ -10,14 +10,14 @@
 	} = $props();
 </script>
 
-<section class="bg-background px-5 py-12 grid-section xl:py-20">
+<section class="bg-background px-5 py-12 grid-section xl:py-20 xl:gap-y-8">
 	<!-- ══ MOBILE : empilé ══ -->
-	<div class="xl:hidden flex flex-col gap-6">
+	<div class="xl:hidden flex flex-col gap-3">
 		<Tagline label="Notre histoire" />
-		<h2 class="font-fustat font-medium text-mobile-title-xl text-dark leading-snug">
+		<h2 class="text-mobile-title-xl text-dark">
 			{title}
 		</h2>
-		<div class="text-body text-dark leading-relaxed [&>p+p]:mt-4">
+		<div class="text-body text-dark [&>p+p]:mt-4">
 			{@html text}
 		</div>
 	</div>
