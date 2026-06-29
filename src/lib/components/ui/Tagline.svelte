@@ -15,7 +15,7 @@
 		<path d="M7.5 0.5L14.5 5.5L12 14H3L0.5 5.5L7.5 0.5Z" fill="var(--color-primary)" />
 	</svg>
 
-	<span class="uppercase text-mobile-tag xl:text-tag">
+	<span class="uppercase text-mobile-tag text-tag">
 		{label}
 	</span>
 </div>
