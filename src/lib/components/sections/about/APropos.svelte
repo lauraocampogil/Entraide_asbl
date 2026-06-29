@@ -26,7 +26,7 @@
 
 		<!-- Titre mixte Fustat + BobbyJones -->
 		<h1
-			class="font-fustat font-medium text-mobile-title-xl xl:text-title-2xl text-dark leading-snug max-w-3xl"
+			class="font-fustat font-medium text-mobile-title-2xl xl:text-title-2xl text-dark leading-snug max-w-3xl"
 		>
 			Une <span class="font-bobbyjones font-bold text-primary">ASSOCIATION</span> de quartier à
 			<span class="font-bobbyjones font-bold text-primary">LAEKEN</span>, active depuis
