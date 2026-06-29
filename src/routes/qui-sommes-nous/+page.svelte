@@ -76,16 +76,6 @@
 					}
 				]
 			}
-		},
-		{
-			type: 'CTABlock',
-			props: {
-				title: 'Vous voulez nous rejoindre ?',
-				description:
-					'Donnez un coup de main en tant que bénévole ou faire un stage — vous êtes les bienvenus.',
-				ctaLabel: 'Nous contacter',
-				ctaHref: '/info-pratique'
-			}
 		}
 	];
 </script>
