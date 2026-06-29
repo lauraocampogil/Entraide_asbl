@@ -20,7 +20,7 @@
 		facebook: { href: 'https://facebook.com' },
 		contact: {
 			email: 'anasta5853@gmail.com',
-			adresse: 'Rue Moorslede 54,\n1020 Bruxelles – Laeken'
+			adresse: 'Rue Moorslede 54,\n1020 Bruxelles, Laeken'
 		},
 		liens: {
 			links: [

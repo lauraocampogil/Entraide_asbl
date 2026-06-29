@@ -59,48 +59,8 @@
 		</div>
 	</div>
 
-	<!-- Col 4-5 : Contact -->
-	<div class="xl:col-span-2 xl:col-start-5 flex flex-col gap-4 mb-10 xl:mb-0">
-		<p class="font-fustat font-semibold text-body text-primary">Contactez-nous</p>
-		<div class="flex flex-col gap-3">
-			<a
-				href="mailto:{contact.email}"
-				class="flex items-center gap-3 font-fustat text-body text-dark hover:text-primary transition-colors"
-			>
-				<svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="shrink-0"
-					><path
-						d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"
-						stroke="currentColor"
-						stroke-width="1.5"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-					/><polyline
-						points="22,6 12,13 2,6"
-						stroke="currentColor"
-						stroke-width="1.5"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-					/></svg
-				>
-				{contact.email}
-			</a>
-			<div class="flex items-start gap-3 font-fustat text-body text-dark">
-				<svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="shrink-0 mt-0.5"
-					><path
-						d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"
-						stroke="currentColor"
-						stroke-width="1.5"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-					/></svg
-				>
-				<span class="whitespace-pre-line">{contact.adresse}</span>
-			</div>
-		</div>
-	</div>
-
-	<!-- Col 7 : Liens -->
-	<div class="xl:col-span-1 xl:col-start-7 flex flex-col gap-4 mb-10 xl:mb-0">
+	<!-- Col 6 : Liens -->
+	<div class="xl:col-span-1 xl:col-start-6 flex flex-col gap-4 mb-10 xl:mb-0">
 		<p class="font-fustat font-semibold text-body text-primary">Liens</p>
 		<nav class="flex flex-col gap-3">
 			{#each liens.links as link}
@@ -113,8 +73,8 @@
 		</nav>
 	</div>
 
-	<!-- Col 8 : Legal -->
-	<div class="xl:col-span-1 xl:col-start-8 flex flex-col gap-4 mb-10 xl:mb-0">
+	<!-- Col 7 : Legal -->
+	<div class="xl:col-span-1 xl:col-start-7 flex flex-col gap-4 mb-10 xl:mb-0">
 		<p class="font-fustat font-semibold text-body text-primary">Legal</p>
 		<nav class="flex flex-col gap-3">
 			{#each legal as item}
@@ -125,6 +85,22 @@
 				>
 			{/each}
 		</nav>
+	</div>
+
+	<!-- Col 8 : Contact -->
+	<div class="xl:col-span-1 xl:col-start-8 flex flex-col gap-4 mb-10 xl:mb-0">
+		<p class="font-fustat font-semibold text-body text-primary">Contactez-nous</p>
+		<div class="flex flex-col gap-3">
+			<a
+				href="mailto:{contact.email}"
+				class="flex items-center gap-3 font-fustat text-body text-dark hover:text-primary transition-colors"
+			>
+				{contact.email}
+			</a>
+			<div class="flex items-start gap-3 font-fustat text-body text-dark">
+				<span class="whitespace-pre-line">{contact.adresse}</span>
+			</div>
+		</div>
 	</div>
 
 	<!-- Bottom bar -->
