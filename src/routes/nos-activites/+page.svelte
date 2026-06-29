@@ -89,8 +89,8 @@
 			props: {
 				title: 'Vous voulez nous rejoindre ?',
 				description:
-					'Que ce soit pour suivre une formation, donner un coup de main en tant que bénévole ou faire un stage — vous êtes les bienvenus.',
-				ctaLabel: 'Nous contacter',
+					'Donnez un coup de main en tant que bénévole ou faire un stage — vous êtes les bienvenus.',
+				ctaLabel: 'Nous contactez',
 				ctaHref: '/info-pratique'
 			}
 		}
