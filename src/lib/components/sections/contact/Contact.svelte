@@ -1,8 +1,16 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+	import gsap from 'gsap';
+	import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 	let nom = $state('');
 	let message = $state('');
 	let sending = $state(false);
 	let sent = $state(false);
+
+	let sectionEl = $state<HTMLElement | null>(null);
+	let titleEl = $state<HTMLElement | null>(null);
+	let shapesActive = $state(false);
 
 	async function handleSubmit() {
 		if (!nom.trim() || !message.trim()) return;
@@ -24,11 +32,63 @@
 			sending = false;
 		}
 	}
+
+	onMount(() => {
+		gsap.registerPlugin(ScrollTrigger);
+
+		const mm = gsap.matchMedia();
+
+		mm.add(
+			{
+				isMobile: '(max-width: 1279px)',
+				isDesktop: '(min-width: 1280px)'
+			},
+			(context) => {
+				const { isMobile } = context.conditions as { isMobile: boolean };
+
+				const tl = gsap.timeline({
+					defaults: { ease: 'none' },
+					scrollTrigger: {
+						trigger: sectionEl,
+						start: 'top 95%',
+						end: isMobile ? 'top 5%' : 'top 25%',
+						scrub: 1
+					}
+				});
+
+				tl.fromTo(titleEl, { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 1 });
+
+				const shapeTrigger = ScrollTrigger.create({
+					trigger: sectionEl,
+					start: 'top 80%',
+					end: isMobile ? 'bottom bottom' : 'bottom top',
+					onEnter: () => (shapesActive = true),
+					onLeave: () => (shapesActive = false),
+					onEnterBack: () => (shapesActive = true),
+					onLeaveBack: () => (shapesActive = false)
+				});
+
+				shapesActive = shapeTrigger.isActive;
+			}
+		);
+
+		const handleLoad = () => ScrollTrigger.refresh();
+		window.addEventListener('load', handleLoad);
+
+		return () => {
+			window.removeEventListener('load', handleLoad);
+			mm.revert();
+		};
+	});
 </script>
 
-<section class="bg-background px-5 py-12 grid-section xl:py-20">
+<section bind:this={sectionEl} class="bg-background px-5 py-12 grid-section xl:py-20">
 	<!-- Titre pleine largeur -->
-	<h2 class="col-span-8 text-mobile-title-2xl xl:text-title-2xl text-dark mb-8 xl:mb-12">
+	<h2
+		bind:this={titleEl}
+		class="col-span-8 text-mobile-title-2xl xl:text-title-2xl text-dark mb-8 xl:mb-12"
+		style="opacity:0"
+	>
 		Venez nous voir
 	</h2>
 
@@ -59,17 +119,23 @@
 
 		<!-- Formulaire mobile -->
 		<div class="relative pt-6">
-			<div class="absolute top-4 -right-4 w-16 h-16 z-20" aria-hidden="true">
+			<div
+				class="absolute top-4 -right-4 w-16 h-16 z-20 {shapesActive ? 'animate-spin-slow' : ''}"
+				aria-hidden="true"
+			>
 				<img src="/assets/svg/Star.svg" alt="" class="w-full h-full object-contain" />
 			</div>
-			<div class="absolute -bottom-4 -left-4 w-16 h-16 z-20" aria-hidden="true">
+			<div
+				class="absolute -bottom-4 -left-4 w-16 h-16 z-20 {shapesActive ? 'animate-spin-slow' : ''}"
+				aria-hidden="true"
+			>
 				<img src="/assets/svg/Bol.svg" alt="" class="w-full h-full object-contain" />
 			</div>
 			<div class="relative z-10 bg-pink rounded-[30px] px-6 py-8">
 				{#if sent}
 					<div class="flex flex-col items-center gap-3 py-8 text-center">
 						<p class="text-title-sm text-dark">Message envoyé !</p>
-						<p class="text-description text-dark-accent">Nous vous répondrons dès que possible.</p>
+						<p class="text-body text-dark opacity-75">Nous vous répondrons dès que possible.</p>
 						<button
 							type="button"
 							onclick={() => (sent = false)}
@@ -80,7 +146,7 @@
 					</div>
 				{:else}
 					<h3 class="text-mobile-title-lg text-dark mb-2">Envoyez-nous un message</h3>
-					<p class="text-description text-dark-accent mb-6">
+					<p class="text-body text-dark opacity-75 mb-6">
 						Nous lisons tous les messages et vous répondrons dès que possible
 					</p>
 					<div class="flex flex-col gap-5">
@@ -148,11 +214,17 @@
 	<!-- Col droite : formulaire -->
 	<div class="hidden xl:block col-span-4 col-start-5 relative">
 		<!-- Star verte en haut à droite — au-dessus de la card -->
-		<div class="absolute -top-10 -right-6 w-25 h-25 z-20" aria-hidden="true">
+		<div
+			class="absolute -top-10 -right-6 w-25 h-25 z-20 {shapesActive ? 'animate-spin-slow' : ''}"
+			aria-hidden="true"
+		>
 			<img src="/assets/svg/Star.svg" alt="" class="w-full h-full object-contain" />
 		</div>
 		<!-- Bol jaune en bas à gauche — au-dessus de la card -->
-		<div class="absolute -bottom-10 -left-10 w-25 h-25 z-20" aria-hidden="true">
+		<div
+			class="absolute -bottom-10 -left-10 w-25 h-25 z-20 {shapesActive ? 'animate-spin-slow' : ''}"
+			aria-hidden="true"
+		>
 			<img src="/assets/svg/Bol.svg" alt="" class="w-full h-full object-contain" />
 		</div>
 
@@ -211,3 +283,17 @@
 		</div>
 	</div>
 </section>
+
+<style>
+	@keyframes spin-slow {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
+		}
+	}
+	.animate-spin-slow {
+		animation: spin-slow 15s linear infinite;
+	}
+</style>
