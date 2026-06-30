@@ -4,7 +4,7 @@
 	<meta name="robots" content="noindex" />
 </svelte:head>
 
-<main class="min-h-screen bg-background px-5 py-16 xl:px-20 xl:py-24">
+<main class="min-h-screen bg-background px-5 sm:px-8 md:px-10 lg:px-12 py-16 xl:px-20 xl:py-24">
 	<div class="mx-auto max-w-3xl">
 		<a
 			href="/"
