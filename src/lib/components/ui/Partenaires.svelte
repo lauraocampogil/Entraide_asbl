@@ -15,7 +15,9 @@
 
 <section class="bg-primary-dark py-10 xl:py-14 overflow-hidden">
 	<!-- Tagline + description -->
-	<div class="px-5 xl:px-20 flex flex-col items-center gap-4 mb-10 xl:mb-12 text-center">
+	<div
+		class="px-5 sm:px-8 md:px-10 lg:px-12 xl:px-20 flex flex-col items-center gap-4 mb-10 xl:mb-12 text-center"
+	>
 		<Tagline label="Nos partenaires" />
 		<p class="text-mobile-title-md xl:text-title-md text-white">
 			{description}
@@ -50,11 +52,9 @@
 			transform: translateX(-50%);
 		}
 	}
-
 	.animate-scroll {
 		animation: scroll 30s linear infinite;
 	}
-
 	.animate-scroll:hover {
 		animation-play-state: paused;
 	}
