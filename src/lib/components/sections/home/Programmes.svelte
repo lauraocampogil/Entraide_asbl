@@ -71,12 +71,12 @@
 
 <section
 	bind:this={sectionEl}
-	class="grid-section bg-background px-5 py-12 xl:py-20 3xl:container 3xl:mx-auto"
+	class="grid-section sm-grid-section bg-background px-5 sm:px-8 md:px-10 lg:px-12 py-12 xl:py-20 3xl:container 3xl:mx-auto"
 >
-	<!-- Tagline + titre : col 1-8 centré -->
+	<!-- Tagline + titre -->
 	<div
 		bind:this={taglineWrapEl}
-		class="xl:col-span-8 flex flex-col items-center gap-3 mb-10 xl:mb-6 text-center"
+		class="col-span-8 sm:col-span-8 flex flex-col items-center gap-3 mb-10 xl:mb-6 text-center"
 		style="opacity:0"
 	>
 		<Tagline label="Nos programmes" />
@@ -85,17 +85,19 @@
 		</h2>
 	</div>
 
-	<!-- Bouton aligné à droite : col 1-8 -->
+	<!-- Bouton -->
 	<div
 		bind:this={buttonEl}
-		class="xl:col-span-8 flex justify-end mb-4 xl:mb-8 xl:mt-10"
+		class="col-span-8 sm:col-span-8 flex justify-end mb-4 xl:mb-8 xl:mt-10"
 		style="opacity:0"
 	>
 		<Button href={ctaHref} label={ctaLabel} variant="inline" />
 	</div>
 
-	<!-- Cards : col 1-8, 4 colonnes desktop -->
-	<div class="xl:col-span-8 flex flex-col gap-4 xl:grid xl:grid-cols-4 xl:gap-5">
+	<!-- Cards -->
+	<div
+		class="col-span-8 sm:col-span-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-4 xl:gap-5"
+	>
 		{#each cards as card, i}
 			<div
 				bind:this={cardsEls[i]}
