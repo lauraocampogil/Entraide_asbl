@@ -10,7 +10,7 @@
 	} = $props();
 </script>
 
-<section class="bg-primary-dark px-5 py-12 xl:py-16">
+<section class="bg-primary-dark px-5 sm:px-8 md:px-10 lg:px-12 py-12 xl:py-16">
 	<div class="grid-section sm-grid-section 3xl:container 3xl:mx-auto">
 		<div
 			class="col-span-8 sm:col-span-8 flex flex-col items-center gap-2 mb-10 xl:mb-14 text-center"
@@ -22,7 +22,7 @@
 		</div>
 
 		<div
-			class="col-span-8 sm:col-span-8 grid grid-cols-3 xl:grid-cols-6 gap-6 xl:gap-20 max-w-4xl mx-auto"
+			class="col-span-8 sm:col-span-8 grid grid-cols-3 gap-3 md:grid-cols-6 md:gap-12 xl:grid-cols-6 xl:gap-20 max-w-4xl mx-auto"
 		>
 			{#each valeurs as valeur}
 				<div class="flex flex-col items-center gap-3">
