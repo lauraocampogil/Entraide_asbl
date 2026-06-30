@@ -99,17 +99,19 @@
 	});
 </script>
 
-<section class="bg-background px-5 py-12 grid-section xl:py-20 3xl:container 3xl:mx-auto">
+<section
+	class="bg-background px-5 sm:px-8 md:px-10 lg:px-12 py-12 grid-section sm-grid-section xl:py-20 3xl:container 3xl:mx-auto"
+>
 	<!-- Tagline + titre : pleine largeur -->
-	<div class="col-span-8 flex flex-col items-center gap-3 mb-10 xl:mb-12 text-center">
+	<div class="col-span-8 sm:col-span-8 flex flex-col items-center gap-3 mb-10 xl:mb-12 text-center">
 		<Tagline label="Diverse activités" />
 		<h2 class="text-mobile-title-xl xl:text-title-xl text-dark">
 			{title}
 		</h2>
 	</div>
 
-	<!-- ══ MOBILE : accordion ══ -->
-	<div class="xl:hidden col-span-8 flex flex-col divide-y divide-black/10">
+	<!-- ══ MOBILE/TABLETTE : accordion ══ -->
+	<div class="xl:hidden col-span-8 sm:col-span-8 flex flex-col divide-y divide-black/10">
 		{#each activities as activity}
 			<div>
 				<button
@@ -139,14 +141,14 @@
 				{#if activeId === activity.id}
 					<div class="pb-6 flex flex-col gap-4">
 						<p class="text-body text-dark">{activity.description}</p>
-						<div class="grid grid-cols-2 gap-2">
+						<div class="grid grid-cols-2 md:grid-cols-3 gap-2">
 							{#each activity.images.slice(0, 2) as img}
-								<div class="rounded-2xl overflow-hidden h-36">
+								<div class="rounded-2xl overflow-hidden h-36 md:h-44">
 									<img src={img.src} alt={img.alt} class="w-full h-full object-cover" />
 								</div>
 							{/each}
 							{#if activity.images[2]}
-								<div class="col-span-2 rounded-2xl overflow-hidden h-36">
+								<div class="col-span-2 md:col-span-1 rounded-2xl overflow-hidden h-36 md:h-44">
 									<img
 										src={activity.images[2].src}
 										alt={activity.images[2].alt}
@@ -162,8 +164,6 @@
 	</div>
 
 	<!-- ══ DESKTOP ══ -->
-
-	<!-- Col gauche : liste -->
 	<div bind:this={listEl} class="hidden xl:block col-span-3 relative self-start">
 		<div class="absolute left-0 top-0 bottom-0 w-0.5 bg-black/10"></div>
 		<div
@@ -224,7 +224,6 @@
 		{/each}
 	</div>
 
-	<!-- Col droite : images — même hauteur que la liste -->
 	<div class="hidden xl:flex col-span-5 col-start-4 gap-3 self-start h-135">
 		{#if active}
 			<div class="flex flex-col gap-3 flex-1">
