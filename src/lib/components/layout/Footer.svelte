@@ -19,12 +19,10 @@
 </script>
 
 <footer
-	class="grid-section sm-grid-section bg-background pt-12 pb-8 xl:pt-16 xl:pb-10 3xl:container 3xl:mx-auto px-5 sm:px-8 md:px-10 lg:px-12"
+	class="grid-section bg-background pt-12 pb-8 xl:pt-16 xl:pb-10 3xl:container 3xl:mx-auto px-5 sm:px-8 md:px-10 lg:px-12"
 >
 	<!-- Logo + tagline + socials : pleine largeur mobile, 4 cols xl -->
-	<div
-		class="col-span-8 sm:col-span-8 xl:col-span-4 xl:col-start-1 flex flex-col gap-5 mb-10 xl:mb-0"
-	>
+	<div class="col-span-8 xl:col-span-4 xl:col-start-1 flex flex-col gap-5 mb-10 xl:mb-0">
 		<a href="/"><img src={logo} alt="Entraide Bruxelles" class="h-10 w-auto" /></a>
 		<p class="text-body text-dark">{tagline}</p>
 		<div class="flex items-center gap-4">
@@ -66,9 +64,7 @@
 	</div>
 
 	<!-- Liens : col gauche sur mobile, 1 col xl -->
-	<div
-		class="col-span-4 sm:col-span-3 xl:col-span-1 xl:col-start-6 flex flex-col gap-4 mb-10 xl:mb-0"
-	>
+	<div class="col-span-4 xl:col-span-1 xl:col-start-6 flex flex-col gap-4 mb-10 xl:mb-0">
 		<p class="font-fustat font-semibold text-body text-primary">Liens</p>
 		<nav class="flex flex-col gap-2 xl:gap-3">
 			{#each liens.links as link}
@@ -83,9 +79,7 @@
 	</div>
 
 	<!-- Legal : col droite sur mobile, 1 col xl -->
-	<div
-		class="col-span-4 sm:col-span-3 xl:col-span-1 xl:col-start-7 flex flex-col gap-4 mb-10 xl:mb-0"
-	>
+	<div class="col-span-4 xl:col-span-1 xl:col-start-7 flex flex-col gap-4 mb-10 xl:mb-0">
 		<p class="font-fustat font-semibold text-body text-primary">Legal</p>
 		<nav class="flex flex-col gap-2 xl:gap-3">
 			{#each legal as item}
@@ -100,9 +94,7 @@
 	</div>
 
 	<!-- Contact : pleine largeur mobile, 1 col xl -->
-	<div
-		class="col-span-8 sm:col-span-2 xl:col-span-1 xl:col-start-8 flex flex-col gap-4 mb-10 xl:mb-0"
-	>
+	<div class="col-span-8 xl:col-span-1 xl:col-start-8 flex flex-col gap-4 mb-10 xl:mb-0">
 		<p class="font-fustat font-semibold text-body text-primary">Contactez-nous</p>
 		<div class="flex flex-col gap-2 xl:gap-3">
 			<a
@@ -123,9 +115,7 @@
 	</div>
 
 	<!-- Bottom bar -->
-	<div
-		class="col-span-8 sm:col-span-8 mt-16 xl:mt-32 flex flex-col gap-1 xl:flex-row xl:justify-end xl:gap-12"
-	>
+	<div class="col-span-8 mt-16 xl:mt-32 flex flex-col gap-1 xl:flex-row xl:justify-end xl:gap-12">
 		<p class="font-fustat text-p-small text-dark-accent">
 			Entraide Bruxelles {new Date().getFullYear()} © Tous droit réservés
 		</p>
