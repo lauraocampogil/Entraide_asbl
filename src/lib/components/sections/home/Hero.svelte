@@ -45,7 +45,6 @@
 				{ y: 0, opacity: 1, duration: 1.0, stagger: 0.16 },
 				'-=0.55'
 			)
-			// Images + formes — démarrent juste après le début de l'incoming gauche
 			.fromTo(photo1El, { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 1.2 }, '-=1.6')
 			.fromTo(photo2El, { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 1.2 }, '-=1.05')
 			.fromTo(
@@ -61,7 +60,6 @@
 				'-=0.85'
 			);
 
-		// Animation "casino" sur les chiffres
 		statValueEls.forEach((el, i) => {
 			if (!el) return;
 			const raw = stats[i].value;
@@ -91,10 +89,12 @@
 </script>
 
 <section
-	class="grid-section bg-background px-5 pt-14 pb-10 xl:pt-30 xl:pb-30 3xl:container 3xl:mx-auto"
+	class="grid-section sm-grid-section bg-background px-5 sm:px-8 md:px-10 lg:px-12 pt-14 pb-10 xl:pt-30 xl:pb-30 3xl:container 3xl:mx-auto"
 >
 	<!-- Col 1-4 -->
-	<div class="xl:col-span-4 xl:col-start-1 flex flex-col gap-7 xl:py-8">
+	<div
+		class="col-span-8 sm:col-span-8 md:col-span-4 xl:col-span-4 xl:col-start-1 flex flex-col gap-7 xl:py-8"
+	>
 		<div class="flex flex-col gap-3 xl:gap-4 xl:pt-8">
 			<h1
 				bind:this={titleEl}
@@ -144,8 +144,10 @@
 		</div>
 	</div>
 
-	<!-- Col 5-8 -->
-	<div class="xl:col-span-4 xl:col-start-5 relative h-105 xl:h-160 mt-4 xl:mt-0 overflow-visible">
+	<!-- Col 5-8 — identique à l'original, juste col-span ajouté -->
+	<div
+		class="col-span-8 sm:col-span-8 md:col-span-4 xl:col-span-4 xl:col-start-5 relative h-105 xl:h-160 mt-4 xl:mt-0 overflow-visible"
+	>
 		<img
 			bind:this={starEl}
 			src="/assets/svg/Star.svg"
