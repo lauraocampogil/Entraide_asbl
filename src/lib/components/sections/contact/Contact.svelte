@@ -61,11 +61,8 @@
 				const shapeTrigger = ScrollTrigger.create({
 					trigger: sectionEl,
 					start: 'top 80%',
-					end: isMobile ? 'bottom bottom' : 'bottom top',
-					onEnter: () => (shapesActive = true),
-					onLeave: () => (shapesActive = false),
-					onEnterBack: () => (shapesActive = true),
-					onLeaveBack: () => (shapesActive = false)
+					once: true,
+					onEnter: () => (shapesActive = true)
 				});
 
 				shapesActive = shapeTrigger.isActive;
