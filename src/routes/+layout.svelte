@@ -1,9 +1,13 @@
 <script lang="ts">
 	import '../app.css';
+	import { page } from '$app/state';
 	import Header from '$lib/components/layout/Header.svelte';
 	import Footer from '$lib/components/layout/Footer.svelte';
 
 	let { children } = $props();
+
+	const legalPages = ['/mentions-legales', '/politique-de-confidentialite', '/cookies'];
+	const isLegalPage = $derived(legalPages.includes(page.url.pathname));
 
 	const nav = {
 		links: [
@@ -38,6 +42,12 @@
 	};
 </script>
 
-<Header logo="/assets/svg/Logo-Entraide.svg" navigation={nav} />
+{#if !isLegalPage}
+	<Header logo="/assets/svg/Logo-Entraide.svg" navigation={nav} />
+{/if}
+
 {@render children()}
-<Footer {...footer} />
+
+{#if !isLegalPage}
+	<Footer {...footer} />
+{/if}
