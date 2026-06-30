@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+	import gsap from 'gsap';
+	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 	import Tagline from '$lib/components/ui/Tagline.svelte';
 	import Button from '$lib/components/ui/Button.svelte';
 
@@ -32,11 +35,50 @@
 <path d="M35 55C30.5567 52.7767 26.11 51.6667 21.6667 51.6667C17.2234 51.6667 12.7767 52.7767 8.33337 55V21.9667C12.7767 19.5467 17.2234 18.3334 21.6667 18.3334C26.11 18.3334 30.5567 19.5467 35 21.9667C39.4434 19.5467 43.89 18.3334 48.3334 18.3334C52.7767 18.3334 57.2234 19.5467 61.6667 21.9667V55C57.2234 52.7767 52.7767 51.6667 48.3334 51.6667C43.89 51.6667 39.4434 52.7767 35 55ZM35 21.9667V55" stroke="black" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>`
 	};
+
+	let sectionEl = $state<HTMLElement | null>(null);
+	let taglineWrapEl = $state<HTMLElement | null>(null);
+	let buttonEl = $state<HTMLElement | null>(null);
+	let cardsEls = $state<HTMLElement[]>([]);
+
+	onMount(() => {
+		gsap.registerPlugin(ScrollTrigger);
+
+		const tl = gsap.timeline({
+			defaults: { ease: 'none' },
+			scrollTrigger: {
+				trigger: sectionEl,
+				start: 'top 95%',
+				end: 'top 20%',
+				scrub: 1
+			}
+		});
+
+		tl.fromTo(taglineWrapEl, { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 1 })
+			.fromTo(buttonEl, { x: 30, opacity: 0 }, { x: 0, opacity: 1, duration: 1 }, '+=0.3')
+			.fromTo(
+				cardsEls,
+				{ y: 60, opacity: 0 },
+				{ y: 0, opacity: 1, duration: 1, stagger: 0.5 },
+				'+=0.3'
+			);
+
+		return () => {
+			ScrollTrigger.getAll().forEach((t) => t.kill());
+		};
+	});
 </script>
 
-<section class="grid-section bg-background px-5 py-12 xl:py-20 3xl:container 3xl:mx-auto">
+<section
+	bind:this={sectionEl}
+	class="grid-section bg-background px-5 py-12 xl:py-20 3xl:container 3xl:mx-auto"
+>
 	<!-- Tagline + titre : col 1-8 centré -->
-	<div class="xl:col-span-8 flex flex-col items-center gap-3 mb-10 xl:mb-6 text-center">
+	<div
+		bind:this={taglineWrapEl}
+		class="xl:col-span-8 flex flex-col items-center gap-3 mb-10 xl:mb-6 text-center"
+		style="opacity:0"
+	>
 		<Tagline label="Nos programmes" />
 		<h2 class="text-mobile-title-xl xl:text-title-xl text-dark max-w-2xl">
 			{title}
@@ -44,14 +86,22 @@
 	</div>
 
 	<!-- Bouton aligné à droite : col 1-8 -->
-	<div class="xl:col-span-8 flex justify-end mb-4 xl:mb-8 xl:mt-10">
+	<div
+		bind:this={buttonEl}
+		class="xl:col-span-8 flex justify-end mb-4 xl:mb-8 xl:mt-10"
+		style="opacity:0"
+	>
 		<Button href={ctaHref} label={ctaLabel} variant="inline" />
 	</div>
 
 	<!-- Cards : col 1-8, 4 colonnes desktop -->
 	<div class="xl:col-span-8 flex flex-col gap-4 xl:grid xl:grid-cols-4 xl:gap-5">
-		{#each cards as card}
-			<div class="bg-white rounded-[30px] px-8 py-8 flex flex-col items-center gap-4 text-center">
+		{#each cards as card, i}
+			<div
+				bind:this={cardsEls[i]}
+				class="bg-white rounded-[30px] px-8 py-8 flex flex-col items-center gap-4 text-center"
+				style="opacity:0"
+			>
 				<div class="text-dark">
 					{@html icons[card.id] ?? icons[1]}
 				</div>
