@@ -5,6 +5,7 @@
 	import gsap from 'gsap';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 	import { page } from '$app/state';
+	import { afterNavigate } from '$app/navigation';
 	import Loader from '$lib/components/layout/Loader.svelte';
 	import Header from '$lib/components/layout/Header.svelte';
 	import Footer from '$lib/components/layout/Footer.svelte';
@@ -46,6 +47,8 @@
 		]
 	};
 
+	let lenisInstance: Lenis | null = null;
+
 	onMount(() => {
 		gsap.registerPlugin(ScrollTrigger);
 
@@ -54,8 +57,8 @@
 			easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
 			smoothWheel: true
 		});
+		lenisInstance = lenis;
 
-		// Synchronise Lenis avec le ticker GSAP pour que ScrollTrigger reste précis
 		lenis.on('scroll', ScrollTrigger.update);
 
 		gsap.ticker.add((time) => {
@@ -67,6 +70,15 @@
 			lenis.destroy();
 			gsap.ticker.remove((time) => lenis.raf(time * 1000));
 		};
+	});
+
+	// Remonte en haut à chaque navigation
+	afterNavigate(() => {
+		if (lenisInstance) {
+			lenisInstance.scrollTo(0, { immediate: true });
+		} else {
+			window.scrollTo(0, 0);
+		}
 	});
 </script>
 
