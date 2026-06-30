@@ -81,7 +81,7 @@
 
 <section
 	bind:this={sectionEl}
-	class="bg-background px-5 py-12 grid-section xl:py-20 sm-grid-section 3xl:container 3xl:mx-auto"
+	class="bg-background px-5 sm:px-8 md:px-10 lg:px-12 py-12 grid-section xl:py-20 sm-grid-section 3xl:container 3xl:mx-auto"
 >
 	<!-- Titre pleine largeur -->
 	<h2
