@@ -13,7 +13,7 @@
 	let { children } = $props();
 
 	const legalPages = ['/mentions-legales', '/politique-de-confidentialite', '/cookies'];
-	const isLegalPage = $derived(legalPages.includes(page.url.pathname));
+	const isLegalPage = $derived(legalPages.includes(page.url.pathname) || page.error !== null);
 
 	const nav = {
 		links: [
