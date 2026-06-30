@@ -61,7 +61,10 @@
 	});
 </script>
 
-<section bind:this={sectionEl} class="bg-background px-5 py-12 grid-section xl:py-20 xl:gap-y-8">
+<section
+	bind:this={sectionEl}
+	class="grid-section sm-grid-section bg-background px-5 py-12 xl:py-20 xl:gap-y-8 3xl:container 3xl:mx-auto"
+>
 	<!-- ══ MOBILE : empilé ══ -->
 	<div class="xl:hidden flex flex-col gap-3">
 		<div bind:this={taglineMobileEl} style="opacity:0">

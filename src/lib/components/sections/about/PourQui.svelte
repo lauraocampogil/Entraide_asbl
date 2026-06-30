@@ -75,7 +75,10 @@
 	});
 </script>
 
-<section bind:this={sectionEl} class="bg-background px-5 py-12 xl:py-20 grid-section">
+<section
+	bind:this={sectionEl}
+	class="grid-section sm-grid-section bg-background px-5 py-12 xl:py-20 3xl:container 3xl:mx-auto"
+>
 	<!-- ══ MOBILE : titre + cards empilés ══ -->
 	<div class="xl:hidden col-span-8 flex flex-col gap-10">
 		<h2 bind:this={titleMobileEl} class="text-mobile-title-xl text-dark" style="opacity:0">

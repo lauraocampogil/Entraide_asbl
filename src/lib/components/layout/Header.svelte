@@ -14,13 +14,11 @@
 	let hidden = $state(false);
 	let lastY = 0;
 
-	// Ferme le menu quand on navigue
 	$effect(() => {
 		$page.url.pathname;
 		menuOpen = false;
 	});
 
-	// Bloque le scroll quand le drawer est ouvert
 	$effect(() => {
 		if (menuOpen) {
 			document.documentElement.style.overflow = 'hidden';
@@ -39,9 +37,9 @@
 			if (currentY < 80) {
 				hidden = false;
 			} else if (currentY > lastY) {
-				hidden = true; // scroll vers le bas → cache
+				hidden = true;
 			} else {
-				hidden = false; // scroll vers le haut → montre
+				hidden = false;
 			}
 			lastY = currentY;
 		};
@@ -56,49 +54,51 @@
 	class="fixed top-0 left-0 right-0 z-50 bg-background transition-transform duration-300"
 	class:-translate-y-full={hidden}
 >
-	<div class="flex items-center justify-between px-5 py-3 xl:px-20 xl:py-2 xl:h-20">
-		<!-- Logo -->
-		<a href="/" class="shrink-0">
-			<img src={logo} alt="Entraide Bruxelles" class="h-12 w-auto" />
-		</a>
+	<div class="3xl:container 3xl:mx-auto">
+		<div class="flex items-center justify-between px-5 py-3 xl:px-20 xl:py-2 xl:h-20">
+			<!-- Logo -->
+			<a href="/" class="shrink-0">
+				<img src={logo} alt="Entraide Bruxelles" class="h-12 w-auto" />
+			</a>
 
-		<!-- Nav desktop -->
-		<nav class="hidden xl:flex items-center gap-10">
-			{#each navigation.links as link}
-				<a
-					href={link.href}
-					class="font-fustat text-body text-dark hover:text-primary transition-colors duration-200
-					{$page.url.pathname === link.href ? 'text-primary' : ''}"
+			<!-- Nav desktop -->
+			<nav class="hidden xl:flex items-center gap-10">
+				{#each navigation.links as link}
+					<a
+						href={link.href}
+						class="font-fustat text-body text-dark hover:text-primary transition-colors duration-200
+						{$page.url.pathname === link.href ? 'text-primary' : ''}"
+					>
+						{link.label}
+					</a>
+				{/each}
+			</nav>
+
+			<!-- Burger mobile -->
+			<button
+				type="button"
+				onclick={() => (menuOpen = !menuOpen)}
+				aria-label={menuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+				aria-expanded={menuOpen}
+				class="xl:hidden relative z-50 flex flex-col gap-1.25 p-1"
+			>
+				<span
+					class="block h-[1.5px] w-6.75 bg-dark transition-all duration-300 origin-center
+					{menuOpen ? 'rotate-45 translate-y-[6.5px]' : ''}"
 				>
-					{link.label}
-				</a>
-			{/each}
-		</nav>
-
-		<!-- Burger mobile — reste visible et cliquable au-dessus du drawer -->
-		<button
-			type="button"
-			onclick={() => (menuOpen = !menuOpen)}
-			aria-label={menuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
-			aria-expanded={menuOpen}
-			class="xl:hidden relative z-50 flex flex-col gap-1.25 p-1"
-		>
-			<span
-				class="block h-[1.5px] w-6.75 bg-dark transition-all duration-300 origin-center
-				{menuOpen ? 'rotate-45 translate-y-[6.5px]' : ''}"
-			>
-			</span>
-			<span
-				class="block h-[1.5px] w-6.75 bg-dark transition-all duration-300 origin-center
-				{menuOpen ? '-rotate-45' : 'translate-y-0'}"
-			>
-			</span>
-			<span
-				class="block h-[1.5px] bg-dark transition-all duration-300
-				{menuOpen ? 'w-0 opacity-0' : 'w-3.5'}"
-			>
-			</span>
-		</button>
+				</span>
+				<span
+					class="block h-[1.5px] w-6.75 bg-dark transition-all duration-300 origin-center
+					{menuOpen ? '-rotate-45' : 'translate-y-0'}"
+				>
+				</span>
+				<span
+					class="block h-[1.5px] bg-dark transition-all duration-300
+					{menuOpen ? 'w-0 opacity-0' : 'w-3.5'}"
+				>
+				</span>
+			</button>
+		</div>
 	</div>
 </header>
 

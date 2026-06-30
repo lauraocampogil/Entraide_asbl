@@ -2,7 +2,9 @@
 	import Tagline from '$lib/components/ui/Tagline.svelte';
 </script>
 
-<section class="bg-background px-5 pt-14 pb-10 grid-section xl:pt-20 xl:pb-16">
+<section
+	class="grid-section sm-grid-section bg-background px-5 pt-14 pb-10 xl:pt-20 xl:pb-16 3xl:container 3xl:mx-auto"
+>
 	<div class="col-span-8 flex flex-col items-center text-center">
 		<!-- Pentagone -->
 		<div class="mb-8 xl:mb-10" aria-hidden="true">

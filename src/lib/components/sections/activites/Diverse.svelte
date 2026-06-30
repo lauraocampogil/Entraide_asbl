@@ -99,7 +99,7 @@
 	});
 </script>
 
-<section class="bg-background px-5 py-12 grid-section xl:py-20">
+<section class="bg-background px-5 py-12 grid-section xl:py-20 3xl:container 3xl:mx-auto">
 	<!-- Tagline + titre : pleine largeur -->
 	<div class="col-span-8 flex flex-col items-center gap-3 mb-10 xl:mb-12 text-center">
 		<Tagline label="Diverse activités" />
