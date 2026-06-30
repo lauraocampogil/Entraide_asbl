@@ -16,7 +16,7 @@
 	} = $props();
 </script>
 
-<section class="bg-primary-dark px-5 py-12 xl:py-16">
+<section class="bg-primary-dark px-5 sm:px-8 md:px-10 lg:px-12 py-12 xl:py-16">
 	<div class="grid-section sm-grid-section 3xl:container 3xl:mx-auto">
 		<div class="col-span-8 sm:col-span-8 flex flex-col gap-3 mb-8 xl:mb-10">
 			<Tagline label="Notre équipe" />
@@ -26,7 +26,7 @@
 		</div>
 
 		<div
-			class="col-span-8 sm:col-span-8 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 gap-4 mb-12 xl:mb-14"
+			class="col-span-8 sm:col-span-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 mb-12 xl:mb-14"
 		>
 			{#each personnel as person}
 				<div class="bg-white rounded-[20px] xl:rounded-[30px] px-6 py-5 xl:py-8 xl:px-8">
@@ -37,7 +37,7 @@
 		</div>
 
 		<div
-			class="col-span-8 sm:col-span-8 flex flex-col gap-8 sm:grid sm:grid-cols-3 xl:grid xl:grid-cols-3 xl:gap-10"
+			class="col-span-8 sm:col-span-8 flex flex-col gap-8 sm:grid sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid xl:grid-cols-3 xl:gap-10"
 		>
 			{#each formateurs as f}
 				<div class="flex flex-col">
