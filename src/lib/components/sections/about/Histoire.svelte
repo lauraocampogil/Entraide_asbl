@@ -14,12 +14,10 @@
 
 	let sectionEl = $state<HTMLElement | null>(null);
 
-	// Desktop
 	let taglineEl = $state<HTMLElement | null>(null);
 	let titleEl = $state<HTMLElement | null>(null);
 	let textEl = $state<HTMLElement | null>(null);
 
-	// Mobile
 	let taglineMobileEl = $state<HTMLElement | null>(null);
 	let titleMobileEl = $state<HTMLElement | null>(null);
 	let textMobileEl = $state<HTMLElement | null>(null);
@@ -63,10 +61,10 @@
 
 <section
 	bind:this={sectionEl}
-	class="grid-section sm-grid-section bg-background px-5 py-12 xl:py-20 xl:gap-y-8 3xl:container 3xl:mx-auto"
+	class="grid-section sm-grid-section bg-background px-5 sm:px-8 md:px-10 lg:px-12 py-12 xl:py-20 xl:gap-y-8 3xl:container 3xl:mx-auto"
 >
-	<!-- ══ MOBILE : empilé ══ -->
-	<div class="xl:hidden flex flex-col gap-3">
+	<!-- ══ MOBILE/TABLETTE ══ -->
+	<div class="xl:hidden col-span-8 sm:col-span-8 flex flex-col gap-3">
 		<div bind:this={taglineMobileEl} style="opacity:0">
 			<Tagline label="Notre histoire" />
 		</div>
@@ -79,7 +77,6 @@
 	</div>
 
 	<!-- ══ DESKTOP : grid 8 cols × 2 rows ══ -->
-	<!-- Row 1 : tagline + titre, col 1-3 -->
 	<div class="hidden xl:flex col-span-3 row-start-1 flex-col gap-2">
 		<div bind:this={taglineEl} style="opacity:0">
 			<Tagline label="Notre histoire" />
@@ -89,7 +86,6 @@
 		</h2>
 	</div>
 
-	<!-- Row 2 : texte col 4-8, sous le titre -->
 	<div
 		bind:this={textEl}
 		class="hidden xl:block col-span-5 col-start-4 row-start-2 text-body text-dark leading-relaxed [&>p+p]:mt-5"
