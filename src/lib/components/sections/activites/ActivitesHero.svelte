@@ -3,10 +3,9 @@
 </script>
 
 <section
-	class="grid-section sm-grid-section bg-background px-5 pt-14 pb-10 xl:pt-20 xl:pb-16 3xl:container 3xl:mx-auto"
+	class="grid-section sm-grid-section bg-background px-5 sm:px-8 md:px-10 lg:px-12 pt-14 pb-10 xl:pt-20 xl:pb-16 3xl:container 3xl:mx-auto"
 >
-	<div class="col-span-8 flex flex-col items-center text-center">
-		<!-- Pentagone -->
+	<div class="col-span-8 sm:col-span-8 flex flex-col items-center text-center">
 		<div class="mb-8 xl:mb-10" aria-hidden="true">
 			<svg
 				width="120"
