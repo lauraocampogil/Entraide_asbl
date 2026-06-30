@@ -73,27 +73,29 @@
 
 <section
 	bind:this={sectionEl}
-	class="grid-section sm-grid-section bg-background px-5 py-12 xl:py-20 3xl:container 3xl:mx-auto"
+	class="grid-section sm-grid-section bg-background px-5 sm:px-8 md:px-10 lg:px-12 py-12 xl:py-20 3xl:container 3xl:mx-auto"
 >
-	<!-- ══ MOBILE : titre + cards empilés ══ -->
-	<div class="xl:hidden col-span-8 flex flex-col gap-10">
+	<!-- ══ MOBILE/TABLETTE jusqu'à xl ══ -->
+	<div class="xl:hidden col-span-8 sm:col-span-8 flex flex-col gap-10">
 		<h2 bind:this={titleMobileEl} class="text-mobile-title-xl text-dark" style="opacity:0">
 			{title}
 		</h2>
-		{#each cards as card, i}
-			<div class="relative">
-				<div
-					class="absolute -top-8 right-2 w-16 h-16 z-10 {shapesActive ? 'animate-spin-slow' : ''}"
-					aria-hidden="true"
-				>
-					<img src={shapes[i % shapes.length].src} alt="" class="w-full h-full object-contain" />
+		<div class="flex flex-col md:grid md:grid-cols-2 gap-10 md:gap-6">
+			{#each cards as card, i}
+				<div class="relative">
+					<div
+						class="absolute -top-8 right-2 w-16 h-16 z-10 {shapesActive ? 'animate-spin-slow' : ''}"
+						aria-hidden="true"
+					>
+						<img src={shapes[i % shapes.length].src} alt="" class="w-full h-full object-contain" />
+					</div>
+					<div class="relative z-0 bg-white rounded-[30px] px-6 py-8 h-full">
+						<h3 class="text-mobile-title-lg text-dark mb-2">{card.title}</h3>
+						<p class="text-body text-dark">{card.description}</p>
+					</div>
 				</div>
-				<div class="relative z-0 bg-white rounded-[30px] px-6 py-8">
-					<h3 class="text-mobile-title-lg text-dark mb-2">{card.title}</h3>
-					<p class="text-body text-dark">{card.description}</p>
-				</div>
-			</div>
-		{/each}
+			{/each}
+		</div>
 	</div>
 
 	<!-- ══ DESKTOP : titre + cards dans la grid ══ -->
