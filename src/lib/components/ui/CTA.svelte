@@ -52,20 +52,18 @@
 
 <section
 	bind:this={sectionEl}
-	class="grid-section bg-background px-5 py-10 xl:py-16 3xl:container 3xl:mx-auto"
+	class="grid-section sm-grid-section bg-background px-5 sm:px-8 md:px-10 lg:px-12 py-10 xl:py-16 3xl:container 3xl:mx-auto"
 >
 	<!-- Card pleine largeur col 1-8 -->
 	<div
-		class="xl:col-span-8 relative overflow-hidden rounded-3xl bg-primary-dark xl:h-102.25
-		flex flex-col items-center justify-center text-center px-8 py-14 xl:px-20"
+		class="col-span-8 sm:col-span-8 relative overflow-hidden rounded-3xl bg-primary-dark xl:h-102.25
+		flex flex-col items-center justify-center text-center px-8 py-14 md:py-18 xl:px-20"
 	>
-		<!-- Gradient diamant vertical -->
 		<div
 			class="pointer-events-none absolute inset-0 z-0"
 			style="background: radial-gradient(ellipse 20% 100% at 50% 50%, #FFDFDF 0%, #FF9C9D 50%, #FE9698 100%);"
 		></div>
 
-		<!-- Bol — haut gauche, déborde -->
 		<img
 			bind:this={bolEl}
 			src="/assets/svg/Bol.svg"
@@ -75,7 +73,6 @@
 			style="opacity:0"
 		/>
 
-		<!-- Star — bas droite, bien à droite -->
 		<img
 			bind:this={starEl}
 			src="/assets/svg/Star.svg"
@@ -85,10 +82,9 @@
 			style="opacity:0"
 		/>
 
-		<!-- Contenu -->
 		<div class="relative z-10 flex flex-col items-center gap-6">
 			<h2
-				class="text-mobile-title-xl xl:text-title-2xl text-dark leading-snug xl:whitespace-nowrap"
+				class="text-mobile-title-xl md:text-title-lg xl:text-title-2xl text-dark leading-snug xl:whitespace-nowrap"
 			>
 				{title}
 			</h2>
