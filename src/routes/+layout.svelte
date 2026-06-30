@@ -1,6 +1,7 @@
 <script lang="ts">
 	import '../app.css';
 	import { page } from '$app/state';
+	import Loader from '$lib/components/layout/Loader.svelte';
 	import Header from '$lib/components/layout/Header.svelte';
 	import Footer from '$lib/components/layout/Footer.svelte';
 
@@ -41,6 +42,8 @@
 		]
 	};
 </script>
+
+<Loader />
 
 {#if !isLegalPage}
 	<Header logo="/assets/svg/Logo-Entraide.svg" navigation={nav} />
