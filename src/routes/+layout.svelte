@@ -1,5 +1,9 @@
 <script lang="ts">
 	import '../app.css';
+	import { onMount } from 'svelte';
+	import Lenis from 'lenis';
+	import gsap from 'gsap';
+	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 	import { page } from '$app/state';
 	import Loader from '$lib/components/layout/Loader.svelte';
 	import Header from '$lib/components/layout/Header.svelte';
@@ -41,6 +45,29 @@
 			{ label: 'Cookies', href: '/cookies' }
 		]
 	};
+
+	onMount(() => {
+		gsap.registerPlugin(ScrollTrigger);
+
+		const lenis = new Lenis({
+			duration: 1.2,
+			easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+			smoothWheel: true
+		});
+
+		// Synchronise Lenis avec le ticker GSAP pour que ScrollTrigger reste précis
+		lenis.on('scroll', ScrollTrigger.update);
+
+		gsap.ticker.add((time) => {
+			lenis.raf(time * 1000);
+		});
+		gsap.ticker.lagSmoothing(0);
+
+		return () => {
+			lenis.destroy();
+			gsap.ticker.remove((time) => lenis.raf(time * 1000));
+		};
+	});
 </script>
 
 <Loader />
