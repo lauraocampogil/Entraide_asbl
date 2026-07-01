@@ -36,3 +36,4 @@
 		<Component {...block.props} />
 	{/if}
 {/each}
+ 
