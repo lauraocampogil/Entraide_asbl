@@ -9,6 +9,7 @@
 	import Loader from '$lib/components/layout/Loader.svelte';
 	import Header from '$lib/components/layout/Header.svelte';
 	import Footer from '$lib/components/layout/Footer.svelte';
+	import CookieBanner from '$lib/components/ui/CookieBanner.svelte';
 
 	let { children } = $props();
 
@@ -93,3 +94,5 @@
 {#if !isLegalPage}
 	<Footer {...footer} />
 {/if}
+
+<CookieBanner />
