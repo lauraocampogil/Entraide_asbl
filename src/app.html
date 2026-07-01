@@ -1,25 +1,98 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="text-scale" content="scale" />
+
+		<!-- SEO de base -->
+		<meta
+			name="description"
+			content="Entraide Bruxelles ASBL — Association de quartier à Laeken active depuis 1985. Cours de français, aide aux devoirs, démarches administratives pour adultes et enfants."
+		/>
+		<meta
+			name="keywords"
+			content="entraide bruxelles, association laeken, cours français bruxelles, aide aux devoirs, intégration sociale, ASBL bruxelles, asbl bruxelles, entraide, entraide bruxelles, entraide asbl, entraide laeken, entraide bruxelles asbl, entraide bruxelles association, entraide bruxelles cours français, entraide bruxelles aide aux devoirs, entraide bruxelles intégration sociale"
+		/>
+		<meta name="author" content="Entraide Bruxelles ASBL" />
+		<meta name="robots" content="index, follow" />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://entraide-bruxelles.be/" />
+		<meta
+			property="og:title"
+			content="Entraide Bruxelles — Apprendre, s'intégrer et bien vivre à Bruxelles"
+		/>
+		<meta
+			property="og:description"
+			content="Association de quartier à Laeken active depuis 1985. Cours de français, aide aux devoirs, démarches administratives pour adultes et enfants."
+		/>
+		<meta property="og:image" content="https://entraide-bruxelles.be/og-image.png" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:locale" content="fr_BE" />
+		<meta property="og:site_name" content="Entraide Bruxelles" />
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content="https://entraide-bruxelles.be/" />
+		<meta
+			name="twitter:title"
+			content="Entraide Bruxelles — Apprendre, s'intégrer et bien vivre à Bruxelles"
+		/>
+		<meta
+			name="twitter:description"
+			content="Association de quartier à Laeken active depuis 1985. Cours de français, aide aux devoirs, démarches administratives pour adultes et enfants."
+		/>
+		<meta name="twitter:image" content="https://entraide-bruxelles.be/og-image.png" />
+
+		<!-- GEO -->
+		<meta name="geo.region" content="BE-BRU" />
+		<meta name="geo.placename" content="Laeken, Bruxelles" />
+		<meta name="geo.position" content="50.8785;4.3408" />
+		<meta name="ICBM" content="50.8785, 4.3408" />
+
+		<!-- Schema.org JSON-LD -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "NGO",
+				"name": "Entraide Bruxelles ASBL",
+				"alternateName": "Entraide Bruxelles",
+				"url": "https://entraide-bruxelles.be",
+				"logo": "https://entraide-bruxelles.be/assets/svg/Logo_Entraide_horizontal.svg",
+				"image": "https://entraide-bruxelles.be/og-image.png",
+				"description": "Association de quartier à Laeken active depuis 1985. Cours de français, aide aux devoirs, démarches administratives pour adultes et enfants.",
+				"foundingDate": "1985",
+				"address": {
+					"@type": "PostalAddress",
+					"streetAddress": "Rue Moorslede 54",
+					"addressLocality": "Bruxelles",
+					"postalCode": "1020",
+					"addressCountry": "BE"
+				},
+				"contactPoint": {
+					"@type": "ContactPoint",
+					"email": "anasta5853@gmail.com",
+					"contactType": "customer service",
+					"availableLanguage": ["French"]
+				},
+				"sameAs": []
+			}
+		</script>
+
 		%sveltekit.head%
 
-		<!-- Standard favicon -->
+		<!-- Favicons -->
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 		<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="shortcut icon" href="/favicon.ico" />
-		<!-- Apple Touch Icon -->
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-		<!-- Android Chrome -->
 		<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
 		<link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png" />
 		<meta name="apple-mobile-web-app-title" content="Entraide" />
-		<!-- Manifest -->
 		<link rel="manifest" href="/manifest.json" />
 	</head>
 	<body data-sveltekit-preload-data="hover">
