@@ -9,14 +9,14 @@
 - Démarches administratives
 - Accompagnement socioprofessionnel
 
+## Pages
+
+- [Accueil](https://entraidebruxelles.be): Présentation de l'association et de ses missions
+- [Qui sommes-nous](https://entraidebruxelles.be/qui-sommes-nous): Histoire, équipe et valeurs de l'ASBL
+- [Nos activités](https://entraidebruxelles.be/nos-activites): Détail des cours, ateliers et accompagnements proposés
+- [Info pratique](https://entraidebruxelles.be/info-pratique): Horaires, adresse et modalités d'inscription
+
 ## Contact
 
 - Email: anasta5853@gmail.com
 - Adresse: Rue Moorslede 54, 1020 Bruxelles – Laeken
-
-## Site
-
-- https://entraide-bruxelles.be
-- https://entraide-bruxelles.be/qui-sommes-nous
-- https://entraide-bruxelles.be/nos-activites
-- https://entraide-bruxelles.be/info-pratique
