@@ -82,6 +82,7 @@
 					fill="none"
 					xmlns="http://www.w3.org/2000/svg"
 					xmlns:xlink="http://www.w3.org/1999/xlink"
+					class="block w-full h-full"
 				>
 					<rect width="43.5818" height="41.3435" fill="url(#pattern0_731_4827_loader)" />
 					<defs>
