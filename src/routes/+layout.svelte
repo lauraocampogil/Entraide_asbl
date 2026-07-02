@@ -17,6 +17,8 @@
 	const legalPages = ['/mentions-legales', '/politique-de-confidentialite', '/cookies'];
 	const isLegalPage = $derived(legalPages.includes(page.url.pathname) || page.error !== null);
 
+	const canonicalUrl = $derived(`https://entraide-bruxelles.be${page.url.pathname}`);
+
 	const nav = {
 		links: [
 			{ label: 'Qui sommes-nous?', href: '/qui-sommes-nous' },
@@ -83,6 +85,10 @@
 		}
 	});
 </script>
+
+<svelte:head>
+	<link rel="canonical" href={canonicalUrl} />
+</svelte:head>
 
 <Loader />
 
