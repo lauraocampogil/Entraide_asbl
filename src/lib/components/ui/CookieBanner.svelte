@@ -10,6 +10,11 @@
 			setTimeout(() => (visible = true), 1000);
 		} else if (consent === 'declined') {
 			(window as any)['ga-disable-G-5JY8TCGVVZ'] = true;
+		} else if (consent === 'accepted') {
+			(window as any)['ga-disable-G-5JY8TCGVVZ'] = false;
+			if (typeof window !== 'undefined' && (window as any).dataLayer) {
+				(window as any).dataLayer.push({ event: 'cookie_consent_accepted' });
+			}
 		}
 	});
 
