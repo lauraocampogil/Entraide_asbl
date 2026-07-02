@@ -17,7 +17,7 @@
 	const legalPages = ['/mentions-legales', '/politique-de-confidentialite', '/cookies'];
 	const isLegalPage = $derived(legalPages.includes(page.url.pathname) || page.error !== null);
 
-	const canonicalUrl = $derived(`https://entraide-bruxelles.be${page.url.pathname}`);
+	const canonicalUrl = $derived(`https://www.entraide-bruxelles.be${page.url.pathname}`);
 
 	const nav = {
 		links: [

@@ -11,10 +11,10 @@
 
 ## Pages
 
-- [Accueil](https://entraidebruxelles.be): Présentation de l'association et de ses missions
-- [Qui sommes-nous](https://entraidebruxelles.be/qui-sommes-nous): Histoire, équipe et valeurs de l'ASBL
-- [Nos activités](https://entraidebruxelles.be/nos-activites): Détail des cours, ateliers et accompagnements proposés
-- [Info pratique](https://entraidebruxelles.be/info-pratique): Horaires, adresse et modalités d'inscription
+- [Accueil](https://www.entraide-bruxelles.be): Présentation de l'association et de ses missions
+- [Qui sommes-nous](https://www.entraide-bruxelles.be/qui-sommes-nous): Histoire, équipe et valeurs de l'ASBL
+- [Nos activités](https://www.entraide-bruxelles.be/nos-activites): Détail des cours, ateliers et accompagnements proposés
+- [Info pratique](https://www.entraide-bruxelles.be/info-pratique): Horaires, adresse et modalités d'inscription
 
 ## Contact
 
