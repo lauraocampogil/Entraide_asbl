@@ -84,13 +84,11 @@
 
 		<div class="relative z-10 flex flex-col items-center gap-6">
 			<h2
-				class="text-mobile-title-xl md:text-title-lg xl:text-title-2xl text-dark leading-snug xl:whitespace-nowrap"
+				class="text-mobile-title-xl max-xl:md:text-title-lg xl:text-title-2xl text-dark xl:whitespace-nowrap"
 			>
 				{title}
 			</h2>
-			<p
-				class="font-fustat text-description xl:text-body text-dark leading-relaxed max-w-95 xl:max-w-120"
-			>
+			<p class="font-fustat text-description xl:text-body text-dark max-w-95 xl:max-w-120">
 				{description}
 			</p>
 			<Button href={ctaHref} label={ctaLabel} variant="plain" />
