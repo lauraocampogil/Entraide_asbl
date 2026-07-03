@@ -24,17 +24,83 @@
 				description:
 					"Ce que nous faisons, nous ne pourrions pas le faire sans l'aide de nos partenaires.",
 				images: [
-					{ id: 1, src: '/assets/images/part_logo1.webp', alt: 'La ville de Bruxelles' },
-					{ id: 2, src: '/assets/images/part_logo2.webp', alt: "Maison des enfants de l'horizon" },
-					{ id: 3, src: '/assets/images/part_logo3.webp', alt: 'CPAS OCMW' },
-					{ id: 4, src: '/assets/images/part_logo4.webp', alt: 'Article 27' },
-					{ id: 5, src: '/assets/images/part_logo5.webp', alt: 'Bravvo' },
-					{ id: 6, src: '/assets/images/part_logo6.webp', alt: 'Fondation Roi Baudoin' },
-					{ id: 7, src: '/assets/images/part_logo7.webp', alt: 'One' },
-					{ id: 8, src: '/assets/images/part_logo8.webp', alt: 'COCOF' },
-					{ id: 9, src: '/assets/images/part_logo9.webp', alt: 'APA' },
-					{ id: 10, src: '/assets/images/part_logo10.webp', alt: 'Convivial' },
-					{ id: 11, src: '/assets/images/part_logo11.webp', alt: 'VIA' }
+					{
+						id: 1,
+						src: '/assets/images/part_logo1.webp',
+						alt: 'La ville de Bruxelles',
+						width: 312,
+						height: 162
+					},
+					{
+						id: 2,
+						src: '/assets/images/part_logo2.webp',
+						alt: "Maison des enfants de l'horizon",
+						width: 220,
+						height: 81
+					},
+					{
+						id: 3,
+						src: '/assets/images/part_logo3.webp',
+						alt: 'CPAS OCMW',
+						width: 310,
+						height: 163
+					},
+					{
+						id: 4,
+						src: '/assets/images/part_logo4.webp',
+						alt: 'Article 27',
+						width: 189,
+						height: 266
+					},
+					{
+						id: 5,
+						src: '/assets/images/part_logo5.webp',
+						alt: 'Bravvo',
+						width: 80,
+						height: 80
+					},
+					{
+						id: 6,
+						src: '/assets/images/part_logo6.webp',
+						alt: 'Fondation Roi Baudoin',
+						width: 272,
+						height: 185
+					},
+					{
+						id: 7,
+						src: '/assets/images/part_logo7.webp',
+						alt: 'One',
+						width: 225,
+						height: 225
+					},
+					{
+						id: 8,
+						src: '/assets/images/part_logo8.webp',
+						alt: 'COCOF',
+						width: 254,
+						height: 140
+					},
+					{
+						id: 9,
+						src: '/assets/images/part_logo9.webp',
+						alt: 'APA',
+						width: 160,
+						height: 140
+					},
+					{
+						id: 10,
+						src: '/assets/images/part_logo10.webp',
+						alt: 'Convivial',
+						width: 1281,
+						height: 362
+					},
+					{
+						id: 11,
+						src: '/assets/images/part_logo11.webp',
+						alt: 'VIA',
+						width: 254,
+						height: 192
+					}
 				]
 			}
 		},
