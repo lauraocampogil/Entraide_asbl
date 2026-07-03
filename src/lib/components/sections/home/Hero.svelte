@@ -26,6 +26,14 @@
 	let photo1El = $state<HTMLElement | null>(null);
 	let photo2El = $state<HTMLElement | null>(null);
 
+	// Derive srcset paths from the base image path, assuming files follow the
+	// convention: asbl7.webp -> asbl7-sm.webp (450w) + asbl7-lg.webp (710w).
+	// Falls back gracefully: browsers that can't match a srcset candidate use `src`.
+	function srcsetFor(src: string) {
+		const base = src.replace(/\.webp$/, '');
+		return `${base}-sm.webp 450w, ${base}-lg.webp 710w`;
+	}
+
 	function parseStat(value: string) {
 		const prefix = value.match(/^\+/) ? '+' : '';
 		const suffix = !prefix && value.match(/\+$/) ? '+' : '';
@@ -169,7 +177,13 @@
 				rounded-2xl xl:rounded-[50px] overflow-hidden z-10 shadow-md"
 				style="opacity:0"
 			>
-				<img src={images[0].src} alt={images[0].alt} class="w-full h-full object-cover" />
+				<img
+					src={images[0].src}
+					srcset={srcsetFor(images[0].src)}
+					sizes="(min-width: 1280px) 25vw, 47vw"
+					alt={images[0].alt}
+					class="w-full h-full object-cover"
+				/>
 			</div>
 		{/if}
 
@@ -182,7 +196,13 @@
 				rounded-2xl xl:rounded-[50px] overflow-hidden z-10 shadow-md"
 				style="opacity:0"
 			>
-				<img src={images[1].src} alt={images[1].alt} class="w-full h-full object-cover" />
+				<img
+					src={images[1].src}
+					srcset={srcsetFor(images[1].src)}
+					sizes="(min-width: 1280px) 25vw, 47vw"
+					alt={images[1].alt}
+					class="w-full h-full object-cover"
+				/>
 			</div>
 		{/if}
 
