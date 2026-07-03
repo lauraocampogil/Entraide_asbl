@@ -84,7 +84,7 @@
 
 		<div class="relative z-10 flex flex-col items-center gap-6">
 			<h2
-				class="text-mobile-title-xl max-xl:md:text-title-lg xl:text-title-2xl text-dark xl:whitespace-nowrap"
+				class="text-mobile-title-xl max-xl:md:text-title-lg xl:text-title-xl text-dark xl:whitespace-nowrap"
 			>
 				{title}
 			</h2>
