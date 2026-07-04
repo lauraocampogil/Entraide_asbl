@@ -93,8 +93,8 @@
 				>
 				</span>
 				<span
-					class="block h-[1.5px] bg-dark transition-all duration-300
-					{menuOpen ? 'w-0 opacity-0' : 'w-3.5'}"
+					class="block h-[1.5px] bg-dark transition-all duration-300"
+					style={menuOpen ? 'width: 0; opacity: 0;' : 'width: 0.875rem; opacity: 1;'}
 				>
 				</span>
 			</button>
