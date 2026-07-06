@@ -110,14 +110,14 @@
 			</div>
 			<div class="flex flex-col sm:flex-row gap-6">
 				<div class="flex flex-col gap-2 flex-1">
-					<p class="text-title-md text-dark">Notre adresse</p>
+					<p class="lg:text-title-md text-mobile-title-md text-dark">Notre adresse</p>
 					<div>
 						<p class="text-body text-dark">Rue Moorslede 54, 1020 Bruxelles – Laeken</p>
 						<p class="text-p-small text-dark-accent">Région de Bruxelles-Capitale</p>
 					</div>
 				</div>
 				<div class="flex flex-col gap-2 flex-1">
-					<p class="text-title-md text-dark">Appelez-nous</p>
+					<p class="lg:text-title-md text-mobile-title-md text-dark">Appelez-nous</p>
 					<div>
 						<p class="text-body text-dark">
 							Directrice :
