@@ -94,7 +94,7 @@
 
 	<!-- ══ MOBILE : empilé ══ -->
 	<div class="xl:hidden col-span-8 flex flex-col gap-10">
-		<!-- Carte + adresse -->
+		<!-- Carte + adresse + appelez-nous -->
 		<div class="flex flex-col gap-6">
 			<div class="rounded-2xl overflow-hidden h-70 shadow-sm">
 				<iframe
@@ -113,6 +113,23 @@
 				<div>
 					<p class="text-body text-dark">Rue Moorslede 54, 1020 Bruxelles – Laeken</p>
 					<p class="text-p-small text-dark-accent">Région de Bruxelles-Capitale</p>
+				</div>
+			</div>
+			<div class="flex flex-col gap-2">
+				<p class="text-title-md text-dark">Appelez-nous</p>
+				<div>
+					<p class="text-body text-dark">
+						Directrice :
+						<a href="tel:+32485590443" class="hover:text-primary transition-colors"
+							>+32 485 59 04 43</a
+						>
+					</p>
+					<p class="text-body text-dark">
+						Coordinatrice :
+						<a href="tel:+32475974448" class="hover:text-primary transition-colors"
+							>+32 475 97 44 48</a
+						>
+					</p>
 				</div>
 			</div>
 		</div>
@@ -188,7 +205,7 @@
 
 	<!-- ══ DESKTOP : col 1-4 carte, col 5-8 formulaire ══ -->
 
-	<!-- Col gauche : carte + adresse -->
+	<!-- Col gauche : carte + adresse + appelez-nous -->
 	<div class="hidden xl:flex col-span-4 flex-col gap-6">
 		<div class="rounded-2xl overflow-hidden h-95 shadow-sm">
 			<iframe
@@ -207,6 +224,23 @@
 			<div>
 				<p class="text-body text-dark">Rue Moorslede 54, 1020 Bruxelles – Laeken</p>
 				<p class="text-body text-dark-accent">Région de Bruxelles-Capitale</p>
+			</div>
+		</div>
+		<div class="flex flex-col gap-2">
+			<p class="text-title-sm text-dark">Appelez-nous</p>
+			<div>
+				<p class="text-body text-dark">
+					Directrice :
+					<a href="tel:+32485590443" class="hover:text-primary transition-colors"
+						>+32 485 59 04 43</a
+					>
+				</p>
+				<p class="text-body text-dark">
+					Coordinatrice :
+					<a href="tel:+32475974448" class="hover:text-primary transition-colors"
+						>+32 475 97 44 48</a
+					>
+				</p>
 			</div>
 		</div>
 	</div>
