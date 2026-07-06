@@ -10,7 +10,7 @@
 		tagline: string;
 		instagram: { href: string };
 		facebook: { href: string };
-		contact: { emails: string[]; phones: string[]; adresse: string };
+		contact: { emails: string[]; adresse: string };
 		liens: { links: { label: string; href: string }[] };
 		legal: { label: string; href: string }[];
 	} = $props();
@@ -206,14 +206,6 @@
 					class="font-fustat text-body text-dark hover:text-primary transition-colors"
 				>
 					{email}
-				</a>
-			{/each}
-			{#each contact.phones as phone}
-				<a
-					href="tel:{phone.replace(/\s+/g, '')}"
-					class="font-fustat text-body text-dark hover:text-primary transition-colors"
-				>
-					{phone}
 				</a>
 			{/each}
 			<a
