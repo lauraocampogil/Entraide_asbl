@@ -33,7 +33,8 @@
 		instagram: { href: 'https://instagram.com' },
 		facebook: { href: 'https://facebook.com' },
 		contact: {
-			email: 'anasta5853@gmail.com',
+			emails: ['anasta5853@gmail.com', 'zoghlamif@hotmail.com'],
+			phones: ['+32 485 59 04 43', '+32 475 97 44 48'],
 			adresse: 'Rue Moorslede 54,\n1020 Bruxelles, Laeken'
 		},
 		liens: {
