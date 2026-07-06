@@ -93,7 +93,7 @@
 <Loader />
 
 {#if !isLegalPage}
-	<Header logo="/assets/svg/Logo-Entraide.svg" navigation={nav} />
+	<Header navigation={nav} />
 {/if}
 
 {@render children()}
