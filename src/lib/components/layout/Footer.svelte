@@ -1,4 +1,5 @@
 <script lang="ts">
+	import UnixCredit from '$lib/components/UnixCredit.svelte';
 	let {
 		tagline,
 		instagram,
@@ -225,13 +226,7 @@
 			Entraide Bruxelles {new Date().getFullYear()} © Tous droit réservés
 		</p>
 		<p class="font-fustat text-p-small text-dark-accent">
-			Made with love by
-			<a
-				href="https://unixcreativestudio.com/"
-				target="_blank"
-				rel="noopener noreferrer"
-				class="hover:text-primary transition-colors underline">Unix</a
-			>
+			<UnixCredit />
 		</p>
 	</div>
 </footer>
